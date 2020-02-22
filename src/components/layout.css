@@ -1,5 +1,20 @@
+:root {
+  --pink: #ff79c6;
+  --light-bright-green: #50fa7b;
+  --grapefruit: #ff5555;
+  --off-white: #f8f8f2;
+  --white: #ffffff;
+  --gunmetal: #44475a;
+  --main-font: Krungthep;
+}
+html,
+body {
+  margin: 0;
+  height: 100vh;
+  background: var(--gunmetal);
+}
 html {
-  font-family: sans-serif;
+  font-family: var(--main-font);
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -7,6 +22,12 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  padding: 2rem;
+}
+#___gatsby,
+#gatsby-focus-wrapper {
+  height: 100%;
 }
 article,
 aside,
@@ -42,11 +63,13 @@ template {
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  text-decoration: none;
 }
 a:active,
 a:hover {
   outline-width: 0;
 }
+
 abbr[title] {
   border-bottom: none;
   text-decoration: underline;
