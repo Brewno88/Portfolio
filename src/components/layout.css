@@ -1,17 +1,6 @@
-:root {
-  --pink: #ff79c6;
-  --light-bright-green: #50fa7b;
-  --grapefruit: #ff5555;
-  --off-white: #f8f8f2;
-  --white: #ffffff;
-  --gunmetal: #44475a;
-  --main-font: Krungthep;
-}
 html,
 body {
   margin: 0;
-  height: 100vh;
-  background: var(--gunmetal);
 }
 html {
   font-family: var(--main-font);
@@ -22,13 +11,8 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  position: relative;
-  padding: 2rem;
 }
-#___gatsby,
-#gatsby-focus-wrapper {
-  height: 100%;
-}
+
 article,
 aside,
 details,
