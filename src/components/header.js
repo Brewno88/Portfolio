@@ -1,12 +1,13 @@
 import { Link } from "gatsby"
 // import PropTypes from "prop-types"
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import styled, { keyframes, css } from "styled-components"
 
-const Header = ({ siteTitle }) => {
-  const [isNavbarOpen, setIsNavbarOpen] = useState(false)
+const Header = ({ ...props }) => {
+  const [isNavbarOpen, setIsNavbarOpen] = useState(true)
+
   return (
-    <MyHeader isNavbarOpen={isNavbarOpen}>
+    <MyHeader className="header" isNavbarOpen={isNavbarOpen}>
       <Link to="/">
         <MyToggle
           onClick={() => setIsNavbarOpen(!isNavbarOpen)}
@@ -21,16 +22,28 @@ const Header = ({ siteTitle }) => {
       {isNavbarOpen ? (
         <Navbar>
           <ol>
-            <Link to="/about/">
+            <Link
+              to="/about/"
+              activeStyle={{ textShadow: "2px 2px 1px var(--pink)" }}
+            >
               <li className="nav-item">About Me</li>
             </Link>
-            <Link to="/works/">
+            <Link
+              to="/works/"
+              activeStyle={{ textShadow: "2px 2px 1px var(--pink)" }}
+            >
               <li className="nav-item">Works</li>
             </Link>
-            <Link to="/skills/">
+            <Link
+              to="/skills/"
+              activeStyle={{ textShadow: "2px 2px 1px var(--pink)" }}
+            >
               <li className="nav-item">Skills</li>
             </Link>
-            <Link to="/get-in-touch/">
+            <Link
+              to="/get-in-touch/"
+              activeStyle={{ textShadow: "2px 2px 1px var(--pink)" }}
+            >
               <li className="nav-item">Get In Touch</li>
             </Link>
           </ol>
