@@ -5,7 +5,6 @@ import styled, { keyframes, css } from "styled-components"
 
 const Header = ({ siteTitle }) => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(false)
-  console.log(isNavbarOpen)
   return (
     <MyHeader isNavbarOpen={isNavbarOpen}>
       <Link to="/">
@@ -54,6 +53,7 @@ const MyHeader = styled.header`
   width: auto;
   display: flex;
   justify-content: ${props => (props.isNavbarOpen ? "space-between" : "end")};
+  padding: 1rem 1rem 0 1rem;
 `
 
 const Navbar = styled.nav`
