@@ -68,10 +68,5 @@ body #___gatsby,
 `
 const Wrap = styled.div`
   height: 100%;
-  .background {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
 `
 export default Layout

@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 const Main = ({ ...props }) => {
-  return <MyMain>{props.children}</MyMain>
+  return <MyMain className={props.className}>{props.children}</MyMain>
 }
 
 //* styled-component < 💅>

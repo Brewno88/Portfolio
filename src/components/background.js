@@ -27,12 +27,9 @@ const Background = ({ ...props }) => {
 
 //* styled-component < 💅>
 const Wrap = styled(BackgroundImage)`
+  display: flex;
+  flex-direction: column;
   height: 100%;
-  .background {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
 `
 
 export default Background
