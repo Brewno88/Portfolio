@@ -12,36 +12,37 @@ const IndexPage = ({ ...props }) => {
 
   return (
     <Wrap className="index" isMyNameGreen={isMyNameGreen}>
-      <Layout path={props.path} />
-      <SEO title="Home" />
-      <Main>
-        <TextIntro innerText="Hi!" />
-        <TextIntro innerText="I am">
-          {" "}
-          <span
-            className="my-name"
-            onMouseEnter={() => setIsMyNameGreen(false)}
-            onMouseLeave={() => setIsMyNameGreen(true)}
-          >
-            Vincenzo
-          </span>
-        </TextIntro>
-        <TextIntro innerText="a">
-          {" "}
-          <span
-            className="my-role"
-            onMouseEnter={() => setIsMyNameGreen(false)}
-            onMouseLeave={() => setIsMyNameGreen(true)}
-          >
-            Front End Developer
-          </span>
-        </TextIntro>
-        <TextIntro innerText="and this is my">
-          {" "}
-          <MySpace className="my-space">_</MySpace>
-          {""} !
-        </TextIntro>
-      </Main>
+      <Layout>
+        <SEO title="Home" />
+        <Main>
+          <TextIntro innerText="Hi!" />
+          <TextIntro innerText="I am">
+            {" "}
+            <span
+              className="my-name"
+              onMouseEnter={() => setIsMyNameGreen(false)}
+              onMouseLeave={() => setIsMyNameGreen(true)}
+            >
+              Vincenzo
+            </span>
+          </TextIntro>
+          <TextIntro innerText="a">
+            {" "}
+            <span
+              className="my-role"
+              onMouseEnter={() => setIsMyNameGreen(false)}
+              onMouseLeave={() => setIsMyNameGreen(true)}
+            >
+              Front End Developer
+            </span>
+          </TextIntro>
+          <TextIntro innerText="and this is my">
+            {" "}
+            <MySpace className="my-space">_</MySpace>
+            {""} !
+          </TextIntro>
+        </Main>
+      </Layout>
     </Wrap>
   )
 }
