@@ -11,43 +11,26 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import styled, { createGlobalStyle } from "styled-components"
+import Background from "../components/background"
+// import BackgroundImage from "gatsby-background-image"
 
 import "./layout.css"
 
 const Layout = ({ ...props }) => {
-  const data = useStaticQuery(graphql`
-    query bgImage {
-      allImageSharp {
-        edges {
-          node {
-            id
-            fluid {
-              base64
-              src
-            }
-          }
-        }
-      }
-    }
-  `)
-  const [path, setPath] = useState("")
-
-  useEffect(() => {
-    setPath(props.path)
-  })
   return (
-    <>
-      {/* <Header siteTitle={data.site.siteMetadata.title} /> */}
-      <GlobalStyle data={data} />
-      <Header path={path} />
-    </>
+    <Wrap>
+      <Background>
+        <GlobalStyle />
+        <Header />
+        {props.children}
+      </Background>
+    </Wrap>
   )
 }
 
 // Layout.propTypes = {
 //   children: PropTypes.node.isRequired,
 // }
-
 const GlobalStyle = createGlobalStyle`
 :root {
   --pink: #ff79c6;
@@ -81,11 +64,14 @@ body {
 body #___gatsby,
 #gatsby-focus-wrapper {
   height: 100%;
-  background-image: url(
-    ${props => props.data.allImageSharp.edges[11].node.fluid.src});
-  background-size: cover;
-  border-radius: 50px;
 }
 `
-
+const Wrap = styled.div`
+  height: 100%;
+  .background {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+`
 export default Layout
