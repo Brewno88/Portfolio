@@ -10,12 +10,13 @@ import TextIntro from "../components/textIntro"
 const About = ({ ...props }) => {
   return (
     <Wrap>
-      <Layout path={props.path} />
-      <SEO title="Page two" />
-      <Main>
-        <TextIntro innerText="I am a front End Developer from Italy" />
-        <TextIntro innerText="I like to play Basketball" />
-      </Main>
+      <Layout path={props.path}>
+        <SEO title="Page two" />
+        <Main>
+          <TextIntro innerText="I am a front End Developer from Italy" />
+          <TextIntro innerText="I like to play Basketball" />
+        </Main>
+      </Layout>
     </Wrap>
   )
 }

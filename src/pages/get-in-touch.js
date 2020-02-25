@@ -9,12 +9,17 @@ import SEO from "../components/seo"
 const About = ({ ...props }) => {
   return (
     <Wrap>
-      <Layout path={props.path} />
-      <SEO title="Page two" />
+      <Layout path={props.path}>
+        <SEO title="Page two" />
+      </Layout>
     </Wrap>
   )
 }
 
-const Wrap = styled.div``
+const Wrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+`
 
 export default About
