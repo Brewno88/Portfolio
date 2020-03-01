@@ -17,7 +17,7 @@ const Skills = ({ ...props }) => {
     <Wrap>
       <Layout path={props.path}>
         <SEO title="Page two" />
-        <Main className="skills-wrap">
+        <Main>
           <div className="sections-wrap">
             <Development />
             <Design />
@@ -35,19 +35,20 @@ const Wrap = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100%;
-  .skills-wrap {
-    flex-direction: row;
-    justify-content: space-around;
-    height: 100%;
-  }
+  text-align: center;
+
   .sections-wrap {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    margin: 0 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media (min-width: 1050px) and (max-width: 1400px) {
+      justify-content: flex-start;
+    }
   }
   .section-wrap {
-    width: 19%;
+    width: 35rem;
     display: flex;
     flex-direction: column;
   }

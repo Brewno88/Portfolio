@@ -27,7 +27,7 @@ const Wrap = styled.div`
   height: 100%;
 
   .text-intro {
-    font-size: 30px;
+    font-size: 3rem;
   }
 `
 

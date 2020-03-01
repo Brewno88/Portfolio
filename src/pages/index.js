@@ -57,8 +57,8 @@ const Wrap = styled.div`
       props.isMyNameGreen ? "var(--light-bright-green);" : "var(--pink);"};
     text-shadow: ${props =>
       props.isMyNameGreen
-        ? "var(--pink) 2px 2px 1px;"
-        : "var(--light-bright-green) 2px 2px 1px;"};
+        ? "var(--pink) .2rem .2rem .1rem;"
+        : "var(--light-bright-green) 2px 2px .1rem;"};
     transition: all 0.3s;
   }
   .my-role {
@@ -66,8 +66,8 @@ const Wrap = styled.div`
       props.isMyNameGreen ? "var(--pink);" : "var(--light-bright-green);"};
     text-shadow: ${props =>
       props.isMyNameGreen
-        ? "var(--light-bright-green) 2px 2px 1px;"
-        : "var(--pink) 2px 2px 1px;"};
+        ? "var(--light-bright-green) .2rem .2rem .1rem;"
+        : "var(--pink) .2rem .2rem .1rem;"};
     transition: all 0.3s;
   }
 `
@@ -81,7 +81,7 @@ const blink = keyframes`
 `
 const MySpace = styled.span`
   color: var(--grapefruit);
-  text-shadow: 3px 3px 1px var(--off-white);
+  text-shadow: 0.3rem 0.3rem 0.1rem var(--off-white);
   animation: ${blink} 1s infinite;
   transition: all 1s;
 `

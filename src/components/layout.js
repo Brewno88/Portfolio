@@ -48,6 +48,7 @@ body {
   margin: 0;
   height: 100vh;
   background: var(--black);
+  font-size: 62.5%;
 }
 html {
   font-family: var(--main-font);
@@ -59,7 +60,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
-  padding: 0.5rem;
+
 }
 body #___gatsby,
 #gatsby-focus-wrapper {

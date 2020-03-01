@@ -31,49 +31,52 @@ const Wrap = styled.div`
   height: 100%;
 
   .form-wrap {
-    justify-content: start;
+    justify-content: center;
     align-items: start;
   }
 
   h1 {
     color: var(--light-bright-green);
-    text-shadow: 2px 2px 1px var(--pink);
+    text-shadow: 0.2rem 0.2rem 0.1rem var(--pink);
   }
 
   form {
-    width: 80%;
     width: 46%;
-    margin: 10% 0 0 10%;
+    margin-left: 10%;
   }
 
   input {
-    border-radius: 50px;
+    border-radius: 5rem;
     border: none;
-    width: 50%;
-    height: 10%;
+    width: 19rem;
+    height: 2rem;
+    padding: 2rem;
+    font-size: 1.5rem;
   }
 
   textarea {
     border: none;
-    border-radius: 5px;
-    padding: 20px;
+    border-radius: 2rem;
+    padding: 2rem;
     margin-bottom: 2rem;
     min-width: 100%;
     max-width: 110%;
     min-height: 30%;
+    font-size: 1.5rem;
   }
   button {
+    font-size: 1.5rem;
     border-radius: 50px;
     border: none;
     background: var(--gunmetal);
     color: var(--light-bright-green);
-    width: 15%;
-    height: 6%;
+    width: 7rem;
+    height: 3rem;
     cursor: pointer;
-    box-shadow: 2px 2px 1px var(--pink);
+    box-shadow: 0.2rem 0.2rem 0.1rem var(--pink);
 
     &:hover {
-      transform: translate3D(3px, 3px, 3px);
+      transform: translate3D(0.2rem, 0.2rem, 0.2rem);
       /* transform: translateY(3px); */
     }
   }

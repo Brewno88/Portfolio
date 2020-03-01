@@ -27,13 +27,11 @@ const Development = () => {
       <div className="icons">
         {data.icon.nodes.map(icon => {
           return (
-            <div>
-              <Img
-                className="icon"
-                fixed={icon.childImageSharp.fixed}
-                key={icon.childImageSharp.id}
-              />
-            </div>
+            <Img
+              className="icon"
+              fixed={icon.childImageSharp.fixed}
+              key={icon.childImageSharp.id}
+            />
           )
         })}
       </div>
