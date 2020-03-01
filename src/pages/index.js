@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { Link } from "gatsby"
 import styled, { keyframes } from "styled-components"
 
 import Layout from "../components/layout"
@@ -22,6 +21,8 @@ const IndexPage = ({ ...props }) => {
               className="my-name"
               onMouseEnter={() => setIsMyNameGreen(false)}
               onMouseLeave={() => setIsMyNameGreen(true)}
+              role="button" // this to fix the 'jsx-a11y/no-static-element-interactions' rule
+              tabIndex={0} // Buttons are interactive controls and thus focusable. If the button role is added to an element that is not focusable by itself (such as <span>, <div> or <p>) then, the tabindex attribute has to be used to make the button focusable.
             >
               Vincenzo
             </span>
@@ -32,6 +33,8 @@ const IndexPage = ({ ...props }) => {
               className="my-role"
               onMouseEnter={() => setIsMyNameGreen(false)}
               onMouseLeave={() => setIsMyNameGreen(true)}
+              role="button"
+              tabIndex={0}
             >
               Front End Developer
             </span>
