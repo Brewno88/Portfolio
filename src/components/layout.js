@@ -5,9 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { useState, useEffect } from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react"
 
 import Header from "./header"
 import styled, { createGlobalStyle } from "styled-components"

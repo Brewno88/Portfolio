@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 // import PropTypes from "prop-types"
-import React, { useState, useEffect } from "react"
-import styled, { keyframes, css } from "styled-components"
+import React, { useState } from "react"
+import styled from "styled-components"
 
 const Header = ({ ...props }) => {
   const [isNavbarOpen, setIsNavbarOpen] = useState(true)
