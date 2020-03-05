@@ -12,12 +12,21 @@ import Omnifood from "./omnifood"
 const Slider = () => {
   return (
     <AwesomeSlider>
-      <GFonts />
-      <YoutubeAPI />
-      <PigsGame />
-      <Natours />
-      <Omnifood />
-      <h1>coajseoefsaijo</h1>
+      <div className="outerWrap">
+        <GFonts />
+      </div>
+      <div className="outerWrap">
+        <YoutubeAPI />
+      </div>
+      <div className="outerWrap">
+        <PigsGame />
+      </div>
+      <div className="outerWrap">
+        <Natours />
+      </div>
+      <div className="outerWrap">
+        <Omnifood />
+      </div>
     </AwesomeSlider>
   )
 }

@@ -19,13 +19,6 @@ const Projects = ({ ...props }) => {
       <Layout>
         <SEO title="Page two" />
         <Main className="works-wrap">
-          {/* <AwesomeSlider>
-            <GFonts />
-            <YoutubeAPI />
-            <PigsGame />
-            <Natours />
-            <Omnifood />
-          </AwesomeSlider> */}
           <Slider />
         </Main>
       </Layout>
