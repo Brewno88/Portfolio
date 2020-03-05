@@ -29,10 +29,10 @@ const Header = ({ ...props }) => {
               <li className="nav-item">About Me</li>
             </Link>
             <Link
-              to="/works/"
+              to="/projects/"
               activeStyle={{ textShadow: "2px 2px 1px var(--pink)" }}
             >
-              <li className="nav-item">Works</li>
+              <li className="nav-item">Projects</li>
             </Link>
             <Link
               to="/skills/"
@@ -71,7 +71,7 @@ const MyHeader = styled.header`
 
 const Navbar = styled.nav`
   background-color: var(--off-white);
-  padding: 0 2rem;
+  padding: 2rem 2rem;
   border-radius: 5rem;
   display: flex;
   align-items: center;
@@ -100,6 +100,9 @@ const Navbar = styled.nav`
 
 const MyToggle = styled.div`
   display: flex;
+  position: absolute;
+  bottom: 3%;
+  right: 3%;
 
   .navbar-toggle {
     display: flex;
