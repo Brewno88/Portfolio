@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import Main from "../components/main"
 import SEO from "../components/seo"
 
-const About = ({ ...props }) => {
+const GetInTouch = ({ ...props }) => {
   return (
     <Wrap>
       <Layout path={props.path}>
@@ -81,4 +81,4 @@ const Wrap = styled.div`
   }
 `
 
-export default About
+export default GetInTouch
