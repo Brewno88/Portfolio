@@ -5,8 +5,8 @@ import IconsWrap from "../icons-wrap"
 
 const Icons = () => {
   const data = useStaticQuery(graphql`
-    query GFontsIcons {
-      react: file(name: { eq: "5-react" }) {
+    query natoursIcons {
+      html: file(name: { eq: "1-html5" }) {
         id
         name
         childImageSharp {
@@ -16,7 +16,17 @@ const Icons = () => {
           }
         }
       }
-      ajax: file(name: { eq: "8-ajax" }) {
+      css: file(name: { eq: "2-css3" }) {
+        id
+        name
+        childImageSharp {
+          id
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      sass: file(name: { eq: "4-sass" }) {
         id
         name
         childImageSharp {
@@ -37,16 +47,6 @@ const Icons = () => {
         }
       }
       github: file(name: { eq: "10-github" }) {
-        id
-        name
-        childImageSharp {
-          id
-          fluid {
-            ...GatsbyImageSharpFluid_withWebp
-          }
-        }
-      }
-      google: file(name: { eq: "google" }) {
         id
         name
         childImageSharp {

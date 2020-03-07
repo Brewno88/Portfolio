@@ -5,7 +5,7 @@ import IconsWrap from "../icons-wrap"
 
 const Icons = () => {
   const data = useStaticQuery(graphql`
-    query GFontsIcons {
+    query youtubeIcons {
       react: file(name: { eq: "5-react" }) {
         id
         name

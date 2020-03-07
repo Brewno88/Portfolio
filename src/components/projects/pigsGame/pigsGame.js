@@ -7,15 +7,15 @@ import ProjectWrap from "../project-wrap"
 import Icons from "./icons"
 import DescriptionWrap from "../description-wrap"
 
-const GFonts = () => {
+const PigsGame = () => {
   const data = useStaticQuery(graphql`
-    query GFonts {
-      img: file(name: { eq: "GFonts" }) {
+    query pigs {
+      img: file(name: { eq: "pigsGame" }) {
         id
         childImageSharp {
           id
-          fluid(maxWidth: 2080) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -25,10 +25,10 @@ const GFonts = () => {
   return (
     <ProjectWrap>
       <ImageWrap>
-        <h1 className="project-name">Google Fonts</h1>
+        <h1 className="project-name">Pigs Dice Game</h1>
         <a
           className="image-link"
-          href="https://chingu-solo.github.io/solo-koala-77/"
+          href="https://brewno88.github.io/pigs-dice-game/"
           target="blank"
         >
           <Img
@@ -48,4 +48,4 @@ const GFonts = () => {
   )
 }
 
-export default GFonts
+export default PigsGame

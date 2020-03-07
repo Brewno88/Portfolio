@@ -1,13 +1,12 @@
 import React from "react"
-import styled from "styled-components"
 import AwesomeSlider from "react-awesome-slider"
 import "react-awesome-slider/dist/styles.css"
 
 import GFonts from "./googleFonts/GFonts"
-import YoutubeAPI from "./youtubeAPI"
-import PigsGame from "./pigsGame"
-import Natours from "./natours"
-import Omnifood from "./omnifood"
+import YoutubeAPI from "./youtubeAPI/youtubeAPI"
+import PigsGame from "./pigsGame/pigsGame"
+import Natours from "./natours/natours"
+import Omnifood from "./omnifood/omnifood"
 
 const Slider = () => {
   return (
@@ -30,7 +29,5 @@ const Slider = () => {
     </AwesomeSlider>
   )
 }
-//* styled-component < 💅>
-const Wrap = styled.div``
 
 export default Slider

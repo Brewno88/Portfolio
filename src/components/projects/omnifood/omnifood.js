@@ -7,28 +7,27 @@ import ProjectWrap from "../project-wrap"
 import Icons from "./icons"
 import DescriptionWrap from "../description-wrap"
 
-const GFonts = () => {
+const Omnifood = () => {
   const data = useStaticQuery(graphql`
-    query GFonts {
-      img: file(name: { eq: "GFonts" }) {
+    query omnifood {
+      img: file(name: { eq: "omnifood" }) {
         id
         childImageSharp {
           id
-          fluid(maxWidth: 2080) {
-            ...GatsbyImageSharpFluid_withWebp
+          fluid {
+            ...GatsbyImageSharpFluid
           }
         }
       }
     }
   `)
-
   return (
     <ProjectWrap>
       <ImageWrap>
-        <h1 className="project-name">Google Fonts</h1>
+        <h1 className="project-name">Omnifood</h1>
         <a
           className="image-link"
-          href="https://chingu-solo.github.io/solo-koala-77/"
+          href="https://brewno88.github.io/Omnifood-Project/"
           target="blank"
         >
           <Img
@@ -48,4 +47,4 @@ const GFonts = () => {
   )
 }
 
-export default GFonts
+export default Omnifood

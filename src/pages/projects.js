@@ -4,14 +4,7 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Main from "../components/main"
-import Slider from "../components/projects/slider"
-// import AwesomeSlider from "react-awesome-slider"
-// import "react-awesome-slider/dist/styles.css"
-// import GFonts from "../components/projects/googleFonts/GFonts"
-// import YoutubeAPI from "../components/projects/youtubeAPI"
-// import PigsGame from "../components/projects/pigsGame"
-// import Natours from "../components/projects/natours"
-// import Omnifood from "../components/projects/omnifood"
+import ProjectSlider from "../components/projects/projects-slider"
 
 const Projects = ({ ...props }) => {
   return (
@@ -19,7 +12,7 @@ const Projects = ({ ...props }) => {
       <Layout>
         <SEO title="Page two" />
         <Main className="works-wrap">
-          <Slider />
+          <ProjectSlider />
         </Main>
       </Layout>
     </Wrap>
@@ -35,6 +28,17 @@ const Wrap = styled.div`
     flex: 1;
     align-items: center;
     justify-content: center;
+
+    /* react-awesome-slider style modifies */
+    .awssld {
+      height: 100%;
+      .awssld__container {
+        padding-bottom: 0;
+      }
+      .awssld__content {
+        background-color: transparent;
+      }
+    }
   }
 `
 
