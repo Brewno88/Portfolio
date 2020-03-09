@@ -11,7 +11,7 @@ const Projects = ({ ...props }) => {
     <Wrap>
       <Layout>
         <SEO title="Page two" />
-        <Main className="works-wrap">
+        <Main className="projects-main">
           <ProjectSlider />
         </Main>
       </Layout>
@@ -24,7 +24,7 @@ const Wrap = styled.div`
   flex-direction: column;
   height: 100%;
 
-  .works-wrap {
+  .projects-wrap {
     flex: 1;
     align-items: center;
     justify-content: center;

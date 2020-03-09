@@ -10,7 +10,7 @@ const GetInTouch = ({ ...props }) => {
     <Wrap>
       <Layout path={props.path}>
         <SEO title="Page two" />
-        <Main className="form-wrap">
+        <Main className="getInTouch-main">
           <form name="contact" method="post">
             <h1>Your Email</h1>
             <input type="text" name="name" />

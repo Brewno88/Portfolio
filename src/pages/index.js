@@ -13,7 +13,7 @@ const IndexPage = ({ ...props }) => {
     <Wrap className="index" isMyNameGreen={isMyNameGreen}>
       <Layout>
         <SEO title="Home" />
-        <Main>
+        <Main className="index-main">
           <TextIntro innerText="Hi!" />
           <TextIntro innerText="I am">
             {" "}

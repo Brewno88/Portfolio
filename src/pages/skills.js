@@ -17,7 +17,7 @@ const Skills = ({ ...props }) => {
     <Wrap>
       <Layout path={props.path}>
         <SEO title="Page two" />
-        <Main>
+        <Main className="skills-main">
           <div className="sections-wrap">
             <Development />
             <Design />
