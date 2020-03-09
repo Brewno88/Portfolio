@@ -29,7 +29,7 @@ const Wrap = styled.div`
   flex-direction: column;
   height: 100%;
 
-  .form-wrap {
+  .getInTouch-main {
     justify-content: center;
     align-items: start;
   }
