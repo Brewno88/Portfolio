@@ -37,17 +37,18 @@ const Wrap = styled.div`
   h1 {
     color: var(--light-bright-green);
     text-shadow: 0.2rem 0.2rem 0.1rem var(--pink);
+    margin-top: 3rem;
   }
 
   form {
-    width: 46%;
+    width: 60rem;
     margin-left: 10%;
   }
 
   input {
     border-radius: 5rem;
     border: none;
-    width: 19rem;
+    width: 30rem;
     height: 2rem;
     padding: 2rem;
     font-size: 1.5rem;
