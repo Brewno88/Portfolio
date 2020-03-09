@@ -5,9 +5,7 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React, { useState, useEffect } from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react"
 
 import Header from "./header"
 import styled, { createGlobalStyle } from "styled-components"
@@ -48,9 +46,10 @@ body {
   margin: 0;
   height: 100vh;
   background: var(--black);
+  font-size: 62.5%;
+  font-family: var(--main-font);
 }
 html {
-  font-family: var(--main-font);
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -59,7 +58,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
-  padding: 0.5rem;
+
 }
 body #___gatsby,
 #gatsby-focus-wrapper {

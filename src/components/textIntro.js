@@ -13,7 +13,7 @@ const TextIntro = ({ ...props }) => {
 //* styled-component < 💅>
 const Wrap = styled.span`
   font-family: Krungthep;
-  font-size: 70px;
+  font-size: 7rem;
   line-height: 1.27;
   text-align: center;
   color: var(--off-white);
