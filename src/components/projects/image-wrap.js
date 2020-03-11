@@ -9,8 +9,6 @@ const ImageWrap = ({ ...props }) => {
 const MyImageWrap = styled.div`
   display: flex;
   flex-direction: column;
-  flex: 2;
-  margin-right: 10%;
 
   h1 {
     color: var(--pink);

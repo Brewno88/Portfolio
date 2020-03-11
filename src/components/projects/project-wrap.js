@@ -7,7 +7,11 @@ const ProjectWrap = ({ ...props }) => {
 
 //* styled-component < 💅>
 const MyProjectWrap = styled.div`
+  height: 90%;
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: inherit;
 `
 
 export default ProjectWrap

@@ -12,13 +12,15 @@ const TextIntro = ({ ...props }) => {
 
 //* styled-component < 💅>
 const Wrap = styled.span`
-  font-family: Krungthep;
-  font-size: 7rem;
-  line-height: 1.27;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 3rem;
+  line-height: 1.5;
   text-align: center;
   color: var(--off-white);
   cursor: default;
-  width: max-content;
+  width: 100%;
 `
 
 export default TextIntro

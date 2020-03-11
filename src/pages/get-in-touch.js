@@ -15,7 +15,7 @@ const GetInTouch = ({ ...props }) => {
             <h1>Your Email</h1>
             <input type="text" name="name" />
             <h1>You Message</h1>
-            <textarea name="message" rows="15" cols="70" />
+            <textarea name="message" />
             <button>Send</button>
           </form>
         </Main>
@@ -29,11 +29,6 @@ const Wrap = styled.div`
   flex-direction: column;
   height: 100%;
 
-  .getInTouch-main {
-    justify-content: center;
-    align-items: start;
-  }
-
   h1 {
     color: var(--light-bright-green);
     text-shadow: 0.2rem 0.2rem 0.1rem var(--pink);
@@ -41,14 +36,14 @@ const Wrap = styled.div`
   }
 
   form {
-    width: 60rem;
-    margin-left: 10%;
+    width: 100%;
+    /* margin-left: 10%; */
   }
 
   input {
     border-radius: 5rem;
     border: none;
-    width: 30rem;
+    width: 100%;
     height: 2rem;
     padding: 2rem;
     font-size: 1.5rem;
@@ -59,10 +54,10 @@ const Wrap = styled.div`
     border-radius: 2rem;
     padding: 2rem;
     margin-bottom: 2rem;
-    min-width: 100%;
-    max-width: 110%;
-    min-height: 30%;
     font-size: 1.5rem;
+    resize: none;
+    width: 100%;
+    height: 40vh;
   }
   button {
     font-size: 1.5rem;

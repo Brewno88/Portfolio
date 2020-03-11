@@ -16,7 +16,6 @@ const IndexPage = ({ ...props }) => {
         <Main className="index-main">
           <TextIntro innerText="Hi!" />
           <TextIntro innerText="I am">
-            {" "}
             <span
               className="my-name"
               onMouseEnter={() => setIsMyNameGreen(false)}
@@ -28,7 +27,6 @@ const IndexPage = ({ ...props }) => {
             </span>
           </TextIntro>
           <TextIntro innerText="a">
-            {" "}
             <span
               className="my-role"
               onMouseEnter={() => setIsMyNameGreen(false)}
@@ -40,9 +38,7 @@ const IndexPage = ({ ...props }) => {
             </span>
           </TextIntro>
           <TextIntro innerText="and this is my">
-            {" "}
-            <MySpace className="my-space">_</MySpace>
-            {""} !
+            <MySpace className="my-space">_ </MySpace> !
           </TextIntro>
         </Main>
       </Layout>
@@ -56,6 +52,7 @@ const Wrap = styled.div`
   height: 100%;
 
   .my-name {
+    margin-left: 1rem;
     color: ${props =>
       props.isMyNameGreen ? "var(--light-bright-green);" : "var(--pink);"};
     text-shadow: ${props =>
@@ -65,6 +62,7 @@ const Wrap = styled.div`
     transition: all 0.3s;
   }
   .my-role {
+    margin-left: 1rem;
     color: ${props =>
       props.isMyNameGreen ? "var(--pink);" : "var(--light-bright-green);"};
     text-shadow: ${props =>
@@ -83,6 +81,7 @@ const blink = keyframes`
     }
 `
 const MySpace = styled.span`
+  margin: 0 1rem;
   color: var(--grapefruit);
   text-shadow: 0.3rem 0.3rem 0.1rem var(--off-white);
   animation: ${blink} 1s infinite;
