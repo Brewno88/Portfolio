@@ -40,8 +40,8 @@ const Wrap = styled.div`
   .sections-wrap {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: 100%;
+    justify-content: space-evenly;
+    height: 80%;
 
     @media (min-width: 1050px) and (max-width: 1400px) {
       /* justify-content: flex-start; */
