@@ -13,7 +13,7 @@ const About = ({ ...props }) => {
     "Basketball 🏀",
     "Cooking 👨🏻‍🍳",
     "Manga 📚",
-    "Video Games 🕹",
+    "Games 🕹",
     "Holidays 🏖",
   ]
   return (
@@ -23,7 +23,7 @@ const About = ({ ...props }) => {
         <Main className="about-main">
           <TextIntro innerText="I am a front End Developer from Italy" />
           <div className="textLoop-wrap">
-            <span>I like </span>
+            <div>I like </div>
             <TextLoop
               className="loop"
               children={Hobbies}
@@ -44,15 +44,14 @@ const Wrap = styled.div`
   flex-direction: column;
   height: 100%;
 
-  .about-main {
-    align-items: start;
-  }
-
   .textLoop-wrap {
     color: var(--off-white);
     font-size: 3rem;
     margin-left: 5%;
     margin: 1.5rem 0;
+    line-height: 3rem;
+    text-align: center;
+    width: 100%;
 
     .loop {
       color: var(--light-bright-green);

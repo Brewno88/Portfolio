@@ -39,16 +39,16 @@ const Wrap = styled.div`
 
   .sections-wrap {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 80%;
 
     @media (min-width: 1050px) and (max-width: 1400px) {
-      justify-content: flex-start;
+      /* justify-content: flex-start; */
     }
   }
   .section-wrap {
-    width: 35rem;
+    width: 100%;
     display: flex;
     flex-direction: column;
   }

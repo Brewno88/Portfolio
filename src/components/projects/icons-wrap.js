@@ -8,11 +8,12 @@ const IconsWrap = ({ children }) => {
 //* styled-component < 💅>
 const MyIconsWrap = styled.div`
   display: flex;
-  align-items: end;
-  justify-content: space-evenly;
+  align-items: center;
+  justify-content: flex-start;
 
   .icon {
-    width: 17%;
+    width: 10%;
+    margin: 0 0.2rem;
   }
 `
 

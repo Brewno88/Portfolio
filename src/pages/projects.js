@@ -20,24 +20,25 @@ const Projects = ({ ...props }) => {
 }
 
 const Wrap = styled.div`
-  display: flex;
-  flex-direction: column;
   height: 100%;
 
-  .projects-wrap {
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-
-    /* react-awesome-slider style modifies */
-    .awssld {
-      height: 100%;
-      .awssld__container {
-        padding-bottom: 0;
-      }
+  .projects-main {
+    padding-bottom: 5rem;
+  }
+  /* react-awesome-slider style modifies */
+  .awssld {
+    height: 100%;
+    .awssld__container {
+      padding-bottom: 0;
       .awssld__content {
         background-color: transparent;
+        display: flex;
+        align-items: start;
       }
+    }
+
+    .awssld__bullets {
+      bottom: 0;
     }
   }
 `

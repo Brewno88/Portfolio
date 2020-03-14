@@ -1,130 +1,178 @@
 import { Link } from "gatsby"
-// import PropTypes from "prop-types"
 import React, { useState } from "react"
 import styled from "styled-components"
 
 const Header = ({ ...props }) => {
-  const [isNavbarOpen, setIsNavbarOpen] = useState(true)
-
+  const [isOpen, setIsOpen] = useState(false)
+  console.log(isOpen)
   return (
-    <MyHeader className="header" isNavbarOpen={isNavbarOpen}>
-      <Link to="/">
-        <MyToggle
-          onClick={() => setIsNavbarOpen(!isNavbarOpen)}
-          isNavbarOpen={isNavbarOpen}
-        >
-          <div className="navbar-toggle">
-            <span className="V">V</span>
-            <span className="C">C</span>
-          </div>
-        </MyToggle>
-      </Link>
-      {isNavbarOpen ? (
-        <Navbar>
+    <MyHeader className="header">
+      <Wrap>
+        <HomeLink isOpen={isOpen}>
+          <span role="img" aria-label="house emoji">
+            🏠
+          </span>
+        </HomeLink>
+        <Toggle onClick={() => setIsOpen(!isOpen)}>
+          <span className="V">V</span>
+          <span className="C">C</span>
+        </Toggle>
+
+        <Navbar className="navbar" isOpen={isOpen}>
           <ol>
-            <Link
-              to="/about/"
-              activeStyle={{ textShadow: "2px 2px 1px var(--pink)" }}
-            >
-              <li className="nav-item">About Me</li>
-            </Link>
-            <Link
-              to="/projects/"
-              activeStyle={{ textShadow: "2px 2px 1px var(--pink)" }}
-            >
-              <li className="nav-item">Projects</li>
-            </Link>
-            <Link
-              to="/skills/"
-              activeStyle={{ textShadow: "2px 2px 1px var(--pink)" }}
-            >
-              <li className="nav-item">Skills</li>
-            </Link>
-            <Link
-              to="/get-in-touch/"
-              activeStyle={{ textShadow: "2px 2px 1px var(--pink)" }}
-            >
-              <li className="nav-item">Get In Touch</li>
-            </Link>
+            <li className="nav-item">
+              <ListLink
+                to="/about/"
+                activeStyle={{ backgroundColor: "var(--pink)" }}
+              >
+                <span role="img" aria-label="house emoji">
+                  🙋‍♂️
+                </span>
+              </ListLink>
+            </li>
+            <li className="nav-item">
+              <ListLink
+                to="/projects/"
+                activeStyle={{ backgroundColor: "var(--pink)" }}
+              >
+                <span role="img" aria-label="house emoji">
+                  📙
+                </span>
+              </ListLink>
+            </li>
+            <li className="nav-item">
+              <ListLink
+                to="/skills/"
+                activeStyle={{ backgroundColor: "var(--pink)" }}
+              >
+                <span role="img" aria-label="house emoji">
+                  💻
+                </span>
+              </ListLink>
+            </li>
+            <li className="nav-item">
+              <ListLink
+                to="/get-in-touch/"
+                activeStyle={{ backgroundColor: "var(--pink)" }}
+              >
+                <span role="img" aria-label="house emoji">
+                  📮
+                </span>
+              </ListLink>
+            </li>
           </ol>
         </Navbar>
-      ) : (
-        <div></div>
-      )}
+      </Wrap>
     </MyHeader>
   )
 }
-// Header.propTypes = {
-//   siteTitle: PropTypes.string,
-// }
-
-// Header.defaultProps = {
-//   siteTitle: ``,
-// }
 
 const MyHeader = styled.header`
-  width: auto;
-  display: flex;
-  justify-content: ${props => (props.isNavbarOpen ? "space-between" : "end")};
-  padding: 1rem 1rem 0 1rem;
-`
-
-const Navbar = styled.nav`
-  background-color: var(--off-white);
-  padding: 2rem 2rem;
-  border-radius: 5rem;
-  display: flex;
-  align-items: center;
-
-  ol {
-    display: flex;
-    margin: 0;
-
-    a:hover {
-      text-shadow: 0.2rem 0.2rem 0.1rem var(--pink);
-    }
-
-    a {
-      color: var(--gunmetal);
-      text-shadow: 0.2rem 0.2rem 0.1rem var(--light-bright-green);
-      font-size: 1.6rem;
-    }
-  }
-
-  li {
-    list-style: none;
-    margin: 0 1rem;
-    font-family: var(--main-font);
-  }
-`
-
-const MyToggle = styled.div`
   display: flex;
   position: absolute;
-  bottom: 3%;
-  right: 3%;
+  bottom: 2rem;
+  right: 2rem;
+`
 
-  .navbar-toggle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 8rem;
-    height: 8rem;
-    border-radius: 7.5rem;
-    background-color: var(--off-white);
+const Wrap = styled.div`
+  position: relative;
+  display: flex;
+  align-items: center;
+`
+
+const Toggle = styled.div`
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 7.5rem;
+  background-color: var(--off-white);
+
+  &:hover {
+    cursor: pointer;
   }
+
   .V {
     text-shadow: 0.2rem 0.2rem 0.1rem var(--pink);
-    font-family: Krungthep;
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: left;
     color: var(--light-bright-green);
   }
   .C {
     text-shadow: 0.2rem 0.2rem 0.1rem var(--light-bright-green);
-    font-family: Krungthep;
-    font-size: 4rem;
+    font-size: 3rem;
     color: var(--pink);
+  }
+`
+
+const Navbar = styled.nav`
+  display: ${props => (props.isOpen ? "flex" : "none")};
+  z-index: 10;
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+
+  ol {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    animation: navAppear 0.3s;
+
+    li {
+      margin: 0;
+      list-style: none;
+    }
+  }
+`
+
+const ListLink = styled(Link)`
+  background-color: var(--off-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5rem;
+  margin: 0;
+  width: 4rem;
+  height: 4rem;
+  animation: navAppear 0.3s;
+  font-size: 1.6rem;
+
+  @keyframes navAppear {
+    from {
+      transform: scaleY(0) translateY(100%);
+    }
+    to {
+      transform: scaleY(1) translateY(0);
+    }
+  }
+
+  /* &:hover {
+    text-shadow: 0.2rem 0.2rem 0.1rem var(--pink);
+    transition: all 0.3s linear;
+  } */
+`
+
+const HomeLink = styled(Link)`
+  display: ${props => (props.isOpen ? "flex" : "none")};
+  align-items: center;
+  justify-content: center;
+  background: var(--off-white);
+  border-radius: 5rem;
+  font-size: 1.6rem;
+  animation: homeAppear 0.3s;
+  width: 4rem;
+  height: 4rem;
+  z-index: 20;
+
+  @keyframes homeAppear {
+    from {
+      transform: scaleY(0) translateX(100%);
+    }
+    to {
+      transform: scaleY(1) translateX(0);
+    }
   }
 `
 

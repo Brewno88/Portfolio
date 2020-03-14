@@ -50,6 +50,7 @@ body {
   font-family: var(--main-font);
 }
 html {
+  font-family: var(--main-font);
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }

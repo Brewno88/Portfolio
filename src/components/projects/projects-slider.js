@@ -1,4 +1,5 @@
 import React from "react"
+import styled from "styled-components"
 import AwesomeSlider from "react-awesome-slider"
 import "react-awesome-slider/dist/styles.css"
 
@@ -10,7 +11,7 @@ import Omnifood from "./omnifood/omnifood"
 
 const Slider = () => {
   return (
-    <AwesomeSlider>
+    <MySlider>
       <div className="outerWrap">
         <GFonts />
       </div>
@@ -26,8 +27,14 @@ const Slider = () => {
       <div className="outerWrap">
         <Omnifood />
       </div>
-    </AwesomeSlider>
+    </MySlider>
   )
 }
+
+const MySlider = styled(AwesomeSlider)`
+  .outerWrap {
+    height: 100%;
+  }
+`
 
 export default Slider

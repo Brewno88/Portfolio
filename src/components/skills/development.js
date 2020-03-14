@@ -12,7 +12,7 @@ const Development = () => {
         nodes {
           id
           childImageSharp {
-            fixed(height: 70) {
+            fixed(quality: 100, height: 40) {
               ...GatsbyImageSharpFixed
             }
           }
