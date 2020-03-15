@@ -17,18 +17,15 @@ const MyProjectWrap = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+
     ${respondTo.mobileS`
-
-  `}
-  ${respondTo.mobileM`
-
-  `}
-  ${respondTo.mobileL`
-
-  `}
-  ${respondTo.tablet`
-
-  `}
+    `}
+    ${respondTo.mobileM`
+    `}
+    ${respondTo.mobileL`
+    `}
+    ${respondTo.tablet`
+    `}
 
   @media (orientation: landscape){
     flex-direction: row;

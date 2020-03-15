@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import Main from "../components/main"
 import SEO from "../components/seo"
+import { respondTo } from "../mixins/_respondTo"
 
 const GetInTouch = ({ ...props }) => {
   return (
@@ -12,11 +13,16 @@ const GetInTouch = ({ ...props }) => {
         <SEO title="Page two" />
         <Main className="getInTouch-main">
           <form name="contact" method="post">
-            <h1>Your Email</h1>
-            <input type="text" name="name" />
-            <h1>You Message</h1>
-            <textarea name="message" />
-            <button>Send</button>
+            <div className="email">
+              <h1>Your Email</h1>
+              <input type="text" name="name" />
+            </div>
+            <div className="message">
+              <h1>You Message</h1>
+
+              <textarea name="message" />
+              <button>Send</button>
+            </div>
           </form>
         </Main>
       </Layout>
@@ -36,43 +42,63 @@ const Wrap = styled.div`
   }
 
   form {
-    width: 100%;
-    /* margin-left: 10%; */
-  }
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
 
-  input {
-    border-radius: 5rem;
-    border: none;
-    width: 100%;
-    height: 2rem;
-    padding: 2rem;
-    font-size: 1.5rem;
+    ${respondTo.mobileS`
+      width: 100%
+      `}
+    ${respondTo.tablet`
+      width: 80%;
+    `}
+    ${respondTo.laptop`
+      width: 60%;
+    `}
+    ${respondTo.laptopL`
+      width: 80%;
+    `}
   }
-
-  textarea {
-    border: none;
-    border-radius: 2rem;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    font-size: 1.5rem;
-    resize: none;
-    width: 100%;
-    height: 40vh;
+  .email {
+    input {
+      border-radius: 5rem;
+      border: none;
+      width: 100%;
+      height: 2rem;
+      padding: 2rem;
+      font-size: 1.5rem;
+    }
   }
-  button {
-    font-size: 1.5rem;
-    border-radius: 50px;
-    border: none;
-    background: var(--gunmetal);
-    color: var(--light-bright-green);
-    width: 7rem;
-    height: 3rem;
-    cursor: pointer;
-    box-shadow: 0.2rem 0.2rem 0.1rem var(--pink);
+  .message {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    textarea {
+      border: none;
+      border-radius: 2rem;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+      resize: none;
+      width: 100%;
+      flex: 1;
+    }
+    button {
+      font-size: 1.5rem;
+      border-radius: 50px;
+      border: none;
+      background: var(--gunmetal);
+      color: var(--light-bright-green);
+      width: 7rem;
+      height: 3rem;
+      cursor: pointer;
+      box-shadow: 0.2rem 0.2rem 0.1rem var(--pink);
 
-    &:hover {
-      transform: translate3D(0.2rem, 0.2rem, 0.2rem);
-      /* transform: translateY(3px); */
+      &:hover {
+        transform: translate3D(0.2rem, 0.2rem, 0.2rem);
+        /* transform: translateY(3px); */
+      }
     }
   }
 `
