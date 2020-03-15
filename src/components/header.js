@@ -3,22 +3,21 @@ import React, { useState } from "react"
 import styled from "styled-components"
 
 const Header = ({ ...props }) => {
-  const [isOpen, setIsOpen] = useState(false)
-  console.log(isOpen)
+  const [open, setOpen] = useState(0)
   return (
     <MyHeader className="header">
       <Wrap>
-        <HomeLink isOpen={isOpen}>
-          <span role="img" aria-label="house emoji">
+        <HomeLink to="/" open={open}>
+          <span role="img" aria-label="house emoji" open={open}>
             🏠
           </span>
         </HomeLink>
-        <Toggle onClick={() => setIsOpen(!isOpen)}>
+        <Toggle onClick={() => setOpen(!open)}>
           <span className="V">V</span>
           <span className="C">C</span>
         </Toggle>
 
-        <Navbar className="navbar" isOpen={isOpen}>
+        <Navbar className="navbar" open={open}>
           <ol>
             <li className="nav-item">
               <ListLink
@@ -26,7 +25,7 @@ const Header = ({ ...props }) => {
                 activeStyle={{ backgroundColor: "var(--pink)" }}
               >
                 <span role="img" aria-label="house emoji">
-                  🙋‍♂️
+                  🙍‍♂️
                 </span>
               </ListLink>
             </li>
@@ -85,8 +84,8 @@ const Toggle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 6rem;
-  height: 6rem;
+  width: 7rem;
+  height: 7rem;
   border-radius: 7.5rem;
   background-color: var(--off-white);
 
@@ -96,20 +95,20 @@ const Toggle = styled.div`
 
   .V {
     text-shadow: 0.2rem 0.2rem 0.1rem var(--pink);
-    font-size: 3rem;
+    font-size: 3.5rem;
     text-align: left;
     color: var(--light-bright-green);
   }
   .C {
     text-shadow: 0.2rem 0.2rem 0.1rem var(--light-bright-green);
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: var(--pink);
   }
 `
 
 const Navbar = styled.nav`
-  display: ${props => (props.isOpen ? "flex" : "none")};
-  z-index: 10;
+  display: ${props => (props.open ? "flex" : "none")};
+  z-index: 20;
   position: absolute;
   left: 50%;
   bottom: 100%;
@@ -134,10 +133,11 @@ const ListLink = styled(Link)`
   justify-content: center;
   border-radius: 5rem;
   margin: 0;
-  width: 4rem;
-  height: 4rem;
+  width: 5rem;
+  height: 5rem;
   animation: navAppear 0.3s;
-  font-size: 1.6rem;
+  font-size: 2.5rem;
+  z-index: 20;
 
   @keyframes navAppear {
     from {
@@ -155,15 +155,16 @@ const ListLink = styled(Link)`
 `
 
 const HomeLink = styled(Link)`
-  display: ${props => (props.isOpen ? "flex" : "none")};
+  display: ${props => (props.open ? "flex" : "none")};
+
   align-items: center;
   justify-content: center;
   background: var(--off-white);
   border-radius: 5rem;
-  font-size: 1.6rem;
+  font-size: 2.5rem;
   animation: homeAppear 0.3s;
-  width: 4rem;
-  height: 4rem;
+  width: 5rem;
+  height: 5rem;
   z-index: 20;
 
   @keyframes homeAppear {

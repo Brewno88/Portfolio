@@ -2,6 +2,8 @@ import React from "react"
 import styled from "styled-components"
 import TextLoop from "react-text-loop"
 
+import { respondTo } from "../mixins/_respondTo"
+
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Main from "../components/main"
@@ -23,7 +25,7 @@ const About = ({ ...props }) => {
         <Main className="about-main">
           <TextIntro innerText="I am a front End Developer from Italy" />
           <div className="textLoop-wrap">
-            <div>I like </div>
+            <TextIntro innerText="I like" />
             <TextLoop
               className="loop"
               children={Hobbies}
@@ -46,7 +48,6 @@ const Wrap = styled.div`
 
   .textLoop-wrap {
     color: var(--off-white);
-    font-size: 3rem;
     margin-left: 5%;
     margin: 1.5rem 0;
     line-height: 3rem;
@@ -56,11 +57,21 @@ const Wrap = styled.div`
     .loop {
       color: var(--light-bright-green);
       /* text-shadow: var(--pink) 0.2rem 0.2rem 0.1rem; */
-    }
-  }
+      font-size: 1.5rem;
 
-  .text-intro {
-    font-size: 3rem;
+      ${respondTo.mobileS`
+      font-size: 2.5rem;
+      `}
+      ${respondTo.mobileM`
+      font-size: 3rem;
+      `}
+      ${respondTo.mobileL`
+      font-size: 5.5em;
+      `}
+      ${respondTo.tablet`
+      font-size: 8em;
+      `}
+    }
   }
 `
 

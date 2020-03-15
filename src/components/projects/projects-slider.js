@@ -34,6 +34,7 @@ const Slider = () => {
 const MySlider = styled(AwesomeSlider)`
   .outerWrap {
     height: 100%;
+    width: 85%;
   }
 `
 

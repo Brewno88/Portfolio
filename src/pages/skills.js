@@ -43,8 +43,8 @@ const Wrap = styled.div`
     justify-content: space-evenly;
     height: 80%;
 
-    @media (min-width: 1050px) and (max-width: 1400px) {
-      /* justify-content: flex-start; */
+    @media (max-height: 420px) {
+      flex-direction: row;
     }
   }
   .section-wrap {

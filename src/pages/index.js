@@ -7,7 +7,7 @@ import SEO from "../components/seo"
 import Main from "../components/main"
 
 const IndexPage = ({ ...props }) => {
-  const [isMyNameGreen, setIsMyNameGreen] = useState(true)
+  const [isMyNameGreen, setIsMyNameGreen] = useState(1)
 
   return (
     <Wrap className="index" isMyNameGreen={isMyNameGreen}>
@@ -18,8 +18,8 @@ const IndexPage = ({ ...props }) => {
           <TextIntro innerText="I am">
             <span
               className="my-name"
-              onMouseEnter={() => setIsMyNameGreen(false)}
-              onMouseLeave={() => setIsMyNameGreen(true)}
+              onMouseEnter={() => setIsMyNameGreen(0)}
+              onMouseLeave={() => setIsMyNameGreen(1)}
               role="button" // this to fix the 'jsx-a11y/no-static-element-interactions' rule
               tabIndex={0} // Buttons are interactive controls and thus focusable. If the button role is added to an element that is not focusable by itself (such as <span>, <div> or <p>) then, the tabindex attribute has to be used to make the button focusable.
             >
@@ -29,8 +29,8 @@ const IndexPage = ({ ...props }) => {
           <TextIntro innerText="a">
             <span
               className="my-role"
-              onMouseEnter={() => setIsMyNameGreen(false)}
-              onMouseLeave={() => setIsMyNameGreen(true)}
+              onMouseEnter={() => setIsMyNameGreen(0)}
+              onMouseLeave={() => setIsMyNameGreen(1)}
               role="button"
               tabIndex={0}
             >

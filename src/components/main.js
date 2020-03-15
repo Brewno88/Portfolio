@@ -12,7 +12,7 @@ const MyMain = styled.main`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 2rem;
 `
 
 export default Main

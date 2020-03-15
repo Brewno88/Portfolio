@@ -9,7 +9,8 @@ const DescriptionWrap = ({ ...props }) => {
 const MyDescriptionWrap = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  flex: 1;
 
   p {
     color: var(--white);

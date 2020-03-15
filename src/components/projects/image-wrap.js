@@ -9,16 +9,20 @@ const ImageWrap = ({ ...props }) => {
 const MyImageWrap = styled.div`
   display: flex;
   flex-direction: column;
-
+  flex: 1;
+  justify-content: center;
+  margin-right: 5%;
   h1 {
     color: var(--pink);
     text-shadow: 2px 2px 1px var(--light-bright-green);
     font-size: 3rem;
-    margin-bottom: 4rem;
   }
   .project-image {
-    margin: 0;
     border-radius: 3rem;
+
+    @media (min-height: 250px) {
+      width: 100%;
+    }
   }
 `
 

@@ -34,6 +34,7 @@ const Wrap = styled.div`
         background-color: transparent;
         display: flex;
         align-items: start;
+        height: 90%;
       }
     }
 
