@@ -4,9 +4,7 @@ import { breakpoints } from "./_variables"
 export const respondTo = Object.keys(breakpoints).reduce(
   (accumulator, label) => {
     accumulator[label] = (...args) => css`
-      @media (min-width: ${breakpoints[label]}) and (min-height: ${breakpoints[
-          label
-        ]}) {
+      @media (min-width: ${breakpoints[label]}) {
         ${css(...args)};
       }
     `

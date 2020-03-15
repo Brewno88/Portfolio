@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import styled, { keyframes } from "styled-components"
 
 import Layout from "../components/layout"
-import MainText from "../components/mainText"
+import TextIntro from "../components/textIntro"
 import SEO from "../components/seo"
 import Main from "../components/main"
 
@@ -14,8 +14,8 @@ const IndexPage = ({ ...props }) => {
       <Layout>
         <SEO title="Home" />
         <Main className="index-main">
-          <MainText innerText="Hi!" />
-          <MainText innerText="I am">
+          <TextIntro innerText="Hi!" />
+          <TextIntro innerText="I am">
             <span
               className="my-name"
               onMouseEnter={() => setIsMyNameGreen(0)}
@@ -25,8 +25,8 @@ const IndexPage = ({ ...props }) => {
             >
               Vincenzo
             </span>
-          </MainText>
-          <MainText innerText="a">
+          </TextIntro>
+          <TextIntro innerText="a">
             <span
               className="my-role"
               onMouseEnter={() => setIsMyNameGreen(0)}
@@ -36,10 +36,10 @@ const IndexPage = ({ ...props }) => {
             >
               Front End Developer
             </span>
-          </MainText>
-          <MainText innerText="and this is my">
+          </TextIntro>
+          <TextIntro innerText="and this is my">
             <MySpace className="my-space">_ </MySpace> !
-          </MainText>
+          </TextIntro>
         </Main>
       </Layout>
     </Wrap>
