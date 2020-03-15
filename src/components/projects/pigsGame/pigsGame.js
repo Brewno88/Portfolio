@@ -39,8 +39,8 @@ const PigsGame = () => {
       </ImageWrap>
       <DescriptionWrap>
         <p className="description">
-          This project reproduces the Google Fonts website's look and most of
-          its functionalities.
+          Ever played Pass the Pig? This is a digital version made with HTML /
+          SASS and JavaScript
         </p>
         <Icons />
       </DescriptionWrap>

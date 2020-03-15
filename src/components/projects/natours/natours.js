@@ -39,8 +39,7 @@ const Natours = () => {
       </ImageWrap>
       <DescriptionWrap>
         <p className="description">
-          This project reproduces the Google Fonts website's look and most of
-          its functionalities.
+          An outdoor activity website made for an Udemy course
         </p>
         <Icons />
       </DescriptionWrap>

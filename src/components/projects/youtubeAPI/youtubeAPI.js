@@ -39,8 +39,7 @@ const YoutubeAPI = () => {
       </ImageWrap>
       <DescriptionWrap>
         <p className="description">
-          This project reproduces the Google Fonts website's look and most of
-          its functionalities.
+          A simple video loader using the Youtube API
         </p>
         <Icons />
       </DescriptionWrap>

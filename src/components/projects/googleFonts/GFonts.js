@@ -39,8 +39,8 @@ const GFonts = () => {
       </ImageWrap>
       <DescriptionWrap>
         <p className="description">
-          This project reproduces the Google Fonts website's look and most of
-          its functionalities.
+          A reproduction of the Google Fonts website with most of its features
+          i.e. font search, custom text, dark mode
         </p>
         <Icons />
       </DescriptionWrap>
