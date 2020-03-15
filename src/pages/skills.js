@@ -54,8 +54,8 @@ const Wrap = styled.div`
   .sections-wrap {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    height: 80%;
+    justify-content: space-evenly;
+    height: 95%;
 
     @media (max-height: 420px) {
       flex-direction: row;
