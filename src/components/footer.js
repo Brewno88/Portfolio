@@ -12,7 +12,7 @@ const Footer = ({ ...props }) => {
             🏠
           </span>
         </HomeLink>
-        <Toggle onClick={() => setOpen(!open)}>
+        <Toggle onClick={() => setOpen(!open)} open={open}>
           <span className="V">V</span>
           <span className="C">C</span>
         </Toggle>
@@ -88,6 +88,34 @@ const Toggle = styled.div`
   height: 7rem;
   border-radius: 7.5rem;
   background-color: var(--off-white);
+  animation: ${props => (props.open ? "none" : "shake 5s infinite")};
+
+  @keyframes shake {
+    2%,
+    18% {
+      transform: translate(-2px);
+    }
+
+    4%,
+    16% {
+      transform: translate(4px);
+    }
+
+    6%,
+    10%,
+    14% {
+      transform: translate(-2px);
+    }
+
+    8%,
+    12% {
+      transform: translate(4px);
+    }
+
+    18.1% {
+      transform: translate(0px);
+    }
+  }
 
   &:hover {
     cursor: pointer;

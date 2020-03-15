@@ -30,7 +30,7 @@ const _MainText = styled.span`
   font-size: 5.5em;
   `}
   ${respondTo.tablet`
-  font-size: 5em;
+  font-size: 7em;
   `}
 `
 

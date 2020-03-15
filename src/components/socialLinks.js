@@ -39,7 +39,7 @@ const _SocialLinks = styled.div`
 
   .icon{
     margin-left: 1rem;
-    color: var(--light-bright-green)
+    color: var(--light-bright-green);
   }
 
     ${respondTo.mobileS`
