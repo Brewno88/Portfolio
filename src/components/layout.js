@@ -6,11 +6,13 @@
  */
 
 import React from "react"
-
 import Header from "./header"
+import Footer from "./footer"
 import styled, { createGlobalStyle } from "styled-components"
 import Background from "../components/background"
 // import BackgroundImage from "gatsby-background-image"
+import ProfilePic from "./profilePc"
+import SocialLinks from "./socialLinks"
 
 import "./layout.css"
 
@@ -19,7 +21,11 @@ const Layout = ({ ...props }) => {
     <Wrap>
       <Background>
         <GlobalStyle />
-        <Header />
+        <Header>
+          <ProfilePic />
+          <SocialLinks />
+        </Header>
+        <Footer />
         {props.children}
       </Background>
     </Wrap>
