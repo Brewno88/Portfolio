@@ -1,6 +1,7 @@
 import React from "react"
 
 import styled from "styled-components"
+import { respondTo } from "../mixins/_respondTo"
 // import { useStaticQuery, graphql } from "gatsby"
 // import Img from "gatsby-image"
 import Development from "../components/skills/development"
@@ -31,16 +32,29 @@ const Skills = ({ ...props }) => {
 }
 
 const Wrap = styled.div`
-  display: flex;
-  flex-direction: column;
   width: 100%;
   height: 100%;
   text-align: center;
 
+  .skills-main {
+    justify-content: end;
+      ${respondTo.mobileS`
+      justify-content: end;
+      `}
+      ${respondTo.mobileM`
+      justify-content: end;
+      `}
+      ${respondTo.mobileL`
+      justify-content: center;
+      `}
+      ${respondTo.tablet`
+      justify-content: center;
+      `}
+  }
   .sections-wrap {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     height: 80%;
 
     @media (max-height: 420px) {
@@ -48,7 +62,6 @@ const Wrap = styled.div`
     }
   }
   .section-wrap {
-    width: 100%;
     display: flex;
     flex-direction: column;
   }

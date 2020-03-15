@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { respondTo } from "../mixins/_respondTo"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -23,7 +24,20 @@ const Wrap = styled.div`
   height: 100%;
 
   .projects-main {
+    padding-bottom: 1rem;
+
+    ${respondTo.mobileS`
+      padding-bottom: 1rem;
+    `}
+    ${respondTo.mobileM`
+    padding-bottom: 1rem;
+    `}
+    ${respondTo.mobileL`
+    padding-bottom: 2rem;
+    `}
+    ${respondTo.tablet`
     padding-bottom: 5rem;
+    `}
   }
   /* react-awesome-slider style modifies */
   .awssld {
@@ -33,8 +47,8 @@ const Wrap = styled.div`
       .awssld__content {
         background-color: transparent;
         display: flex;
-        align-items: start;
-        height: 90%;
+        align-items: center;
+        height: 100%;
       }
     }
 

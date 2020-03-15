@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { respondTo } from "../../mixins/_respondTo"
 
 const DescriptionWrap = ({ ...props }) => {
   return <MyDescriptionWrap>{props.children}</MyDescriptionWrap>
@@ -10,13 +11,30 @@ const MyDescriptionWrap = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  flex: 1;
+  width: 45%;
+
+  @media (orientation: portrait){
+    width: 100%
+  }
 
   p {
     color: var(--white);
     font-weight: 500;
-    font-size: 2rem;
     line-height: 1.5;
+    font-size: 1rem;
+
+      ${respondTo.mobileS`
+      font-size: 1.5rem;
+      `}
+      ${respondTo.mobileM`
+      font-size: 1.5rem;
+      `}
+      ${respondTo.mobileL`
+      font-size: 2rem;
+      `}
+      ${respondTo.tablet`
+      font-size: 2rem;
+      `}
   }
 `
 
