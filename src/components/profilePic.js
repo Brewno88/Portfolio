@@ -15,7 +15,7 @@ const ProfilePic = () => {
       }
     }
   `)
-  console.log(data)
+
   return <MyImg fluid={data.profileImg.childImageSharp.fluid} />
 }
 

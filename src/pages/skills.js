@@ -1,7 +1,7 @@
 import React from "react"
 
 import styled from "styled-components"
-import { respondTo } from "../mixins/_respondTo"
+import { respondTo } from "../mixins/respondTo"
 // import { useStaticQuery, graphql } from "gatsby"
 // import Img from "gatsby-image"
 import Development from "../components/skills/development"

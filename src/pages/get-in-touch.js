@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import Main from "../components/main"
 import SEO from "../components/seo"
-import { respondTo } from "../mixins/_respondTo"
+import { respondTo } from "../mixins/respondTo"
 
 const GetInTouch = ({ ...props }) => {
   return (

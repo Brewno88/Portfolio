@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import AwesomeSlider from "react-awesome-slider"
 import "react-awesome-slider/dist/styles.css"
-import { respondTo } from "../../mixins/_respondTo"
+import { respondTo } from "../../mixins/respondTo"
 
 import GFonts from "./googleFonts/GFonts"
 import YoutubeAPI from "./youtubeAPI/youtubeAPI"

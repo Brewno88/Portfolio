@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import TextLoop from "react-text-loop"
 
-import { respondTo } from "../mixins/_respondTo"
+import { respondTo } from "../mixins/respondTo"
 
 const HobbyText = () => {
   const Hobbies = [

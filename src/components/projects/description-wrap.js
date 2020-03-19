@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { respondTo } from "../../mixins/_respondTo"
+import { respondTo } from "../../mixins/respondTo"
 
 const DescriptionWrap = ({ ...props }) => {
   return <MyDescriptionWrap>{props.children}</MyDescriptionWrap>

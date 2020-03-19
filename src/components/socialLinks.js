@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { respondTo } from "../mixins/_respondTo"
+import { respondTo } from "../mixins/respondTo"
 import {
   faGithub,
   faTwitter,
