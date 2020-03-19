@@ -13,16 +13,16 @@ const GetInTouch = ({ ...props }) => {
         <SEO title="Page two" />
         <Main className="getInTouch-main">
           <form name="contact" method="POST" data-netlify="true">
-            <div className="email">
-              <h1>Your Email</h1>
-              <input type="text" name="name" />
-            </div>
-            <div className="message">
-              <h1>You Message</h1>
+            <label className="email">
+              Your Email
+              <input type="email" name="name" />
+            </label>
 
+            <label className="message">
+              You Message
               <textarea name="message" />
               <button>Send</button>
-            </div>
+            </label>
           </form>
         </Main>
       </Layout>
@@ -35,10 +35,10 @@ const Wrap = styled.div`
   flex-direction: column;
   height: 100%;
 
-  h1 {
+  label {
     color: var(--light-bright-green);
     text-shadow: 0.2rem 0.2rem 0.1rem var(--pink);
-    margin-top: 3rem;
+    font-size: 2rem;
   }
 
   form {
@@ -68,6 +68,7 @@ const Wrap = styled.div`
       width: 100%;
       height: 2rem;
       padding: 2rem;
+      margin: 3rem 0;
       font-size: 1.5rem;
     }
   }
@@ -79,7 +80,7 @@ const Wrap = styled.div`
       border: none;
       border-radius: 2rem;
       padding: 2rem;
-      margin-bottom: 2rem;
+      margin: 3rem 0;
       font-size: 1.5rem;
       resize: none;
       width: 100%;
@@ -89,10 +90,10 @@ const Wrap = styled.div`
       font-size: 1.5rem;
       border-radius: 50px;
       border: none;
+      padding: .5rem;
       background: var(--gunmetal);
       color: var(--light-bright-green);
       width: 7rem;
-      height: 3rem;
       cursor: pointer;
       box-shadow: 0.2rem 0.2rem 0.1rem var(--pink);
 
