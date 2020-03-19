@@ -45,7 +45,8 @@ const Wrap = styled.div`
     width: 50%;
     display: flex;
     flex-direction: column;
-    height: 80%;
+    justify-content: center;
+    height: 100%;
 
     ${respondTo.mobileS`
       width: 100%
@@ -54,10 +55,10 @@ const Wrap = styled.div`
       width: 80%;
     `}
     ${respondTo.laptop`
-      width: 60%;
+      width: 40%;
     `}
     ${respondTo.laptopL`
-      width: 80%;
+      width: 40%;
     `}
   }
   .email {
@@ -73,7 +74,7 @@ const Wrap = styled.div`
   .message {
     display: flex;
     flex-direction: column;
-    flex: 2;
+      height: 50%;
     textarea {
       border: none;
       border-radius: 2rem;
@@ -82,7 +83,7 @@ const Wrap = styled.div`
       font-size: 1.5rem;
       resize: none;
       width: 100%;
-      flex: 1;
+      height: 100%;
     }
     button {
       font-size: 1.5rem;
