@@ -12,7 +12,12 @@ const GetInTouch = ({ ...props }) => {
       <Layout path={props.path}>
         <SEO title="Page two" />
         <Main className="getInTouch-main">
-          <form name="contact" action="" method="POST" data-netlify="true">
+          <form
+            name="contact"
+            method="post"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+          >
             <div className="email">
               Your Email
               <input type="email" name="email" />
@@ -22,7 +27,7 @@ const GetInTouch = ({ ...props }) => {
               You Messagefs
               <textarea name="message" />
             </div>
-            <button type="submit">Send</button>
+            <button>Send</button>
           </form>
         </Main>
       </Layout>
