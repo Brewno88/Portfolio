@@ -37,6 +37,10 @@ const _SocialLinks = styled.div`
   margin-right: 2%;
   font-size: 3rem;
 
+  .socialIcons{
+    width: 100%;
+  }
+
   .icon{
     margin-left: 1rem;
     color: var(--light-bright-green);
