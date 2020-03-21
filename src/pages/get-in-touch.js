@@ -13,16 +13,16 @@ const GetInTouch = ({ ...props }) => {
         <SEO title="Page two" />
         <Main className="getInTouch-main">
           <form action="POST" data-netlify="true">
-            <label className="email">
+            <div className="email">
               Your Email
               <input type="email" name="email" />
-            </label>
+            </div>
 
-            <label className="message">
+            <div className="message">
               You Message
               <textarea name="message" />
-            </label>
-            <button>Send</button>
+            </div>
+            <button type="submit">Send</button>
           </form>
         </Main>
       </Layout>
@@ -35,7 +35,7 @@ const Wrap = styled.div`
   flex-direction: column;
   height: 100%;
 
-  label {
+  div {
     color: var(--light-bright-green);
     text-shadow: 0.2rem 0.2rem 0.1rem var(--pink);
     font-size: 2rem;
