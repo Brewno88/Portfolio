@@ -12,7 +12,7 @@ const GetInTouch = ({ ...props }) => {
       <Layout path={props.path}>
         <SEO title="Page two" />
         <Main className="getInTouch-main">
-          <form method="post" name="contact" data-netlify="true">
+          <form method="POST" name="contact" data-netlify="true">
             <h1>Your Email</h1>
             <input type="email" name="email" />
             <h1>Message</h1>
@@ -60,7 +60,7 @@ const Wrap = styled.div`
     width: 100%;
     height: 2rem;
     padding: 2rem;
-    margin: 3rem 0;
+    margin-bottom: 3rem;
     font-size: 1.5rem;
   }
 
@@ -69,7 +69,7 @@ const Wrap = styled.div`
       border: none;
       border-radius: 2rem;
       padding: 2rem;
-      margin: 3rem 0;
+      margin-bottom: 3rem;
       font-size: 1.5rem;
       resize: none;
       width: 100%;
