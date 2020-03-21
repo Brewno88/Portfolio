@@ -12,17 +12,17 @@ const GetInTouch = ({ ...props }) => {
       <Layout path={props.path}>
         <SEO title="Page two" />
         <Main className="getInTouch-main">
-          <form name="contact" method="POST" data-netlify="true">
+          <form name="contact" data-netlify="true">
             <label className="email">
               Your Email
-              <input type="email" name="name" />
+              <input type="email" name="email" />
             </label>
 
             <label className="message">
               You Message
               <textarea name="message" />
-              <button>Send</button>
             </label>
+            <button>Send</button>
           </form>
         </Main>
       </Layout>
@@ -39,6 +39,17 @@ const Wrap = styled.div`
     color: var(--light-bright-green);
     text-shadow: 0.2rem 0.2rem 0.1rem var(--pink);
     font-size: 2rem;
+
+    input {
+      border-radius: 5rem;
+      border: none;
+      width: 100%;
+      height: 2rem;
+      padding: 2rem;
+      margin: 3rem 0;
+      font-size: 1.5rem;
+    }
+
   }
 
   form {
@@ -61,17 +72,7 @@ const Wrap = styled.div`
       width: 40%;
     `}
   }
-  .email {
-    input {
-      border-radius: 5rem;
-      border: none;
-      width: 100%;
-      height: 2rem;
-      padding: 2rem;
-      margin: 3rem 0;
-      font-size: 1.5rem;
-    }
-  }
+
   .message {
     display: flex;
     flex-direction: column;
@@ -86,6 +87,7 @@ const Wrap = styled.div`
       width: 100%;
       height: 100%;
     }
+  }
     button {
       font-size: 1.5rem;
       border-radius: 50px;
@@ -102,7 +104,6 @@ const Wrap = styled.div`
         /* transform: translateY(3px); */
       }
     }
-  }
 `
 
 export default GetInTouch
