@@ -12,7 +12,7 @@ const GetInTouch = ({ ...props }) => {
       <Layout path={props.path}>
         <SEO title="Page two" />
         <Main className="getInTouch-main">
-          <form name="contact" data-netlify="true">
+          <form action="POST" data-netlify="true">
             <label className="email">
               Your Email
               <input type="email" name="email" />
