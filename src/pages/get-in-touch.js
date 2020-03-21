@@ -1,33 +1,20 @@
 import React from "react"
 import styled from "styled-components"
+import { respondTo } from "../mixins/respondTo"
 
 import Layout from "../components/layout"
 import Main from "../components/main"
 import SEO from "../components/seo"
-import { respondTo } from "../mixins/respondTo"
 
 const GetInTouch = ({ ...props }) => {
   return (
     <Wrap>
-      <Layout path={props.path}>
+      <Layout>
         <SEO title="Page two" />
         <Main className="getInTouch-main">
-          <form
-            name="contact"
-            method="post"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-          >
-            <div className="email">
-              Your Email
-              <input type="email" name="email" />
-            </div>
-
-            <div className="message">
-              You Messagefs
-              <textarea name="message" />
-            </div>
-            <button>Send</button>
+          <form action="POST" data-netlify="true">
+            <input type="email" />
+            <input type="submit" />>
           </form>
         </Main>
       </Layout>
@@ -36,11 +23,9 @@ const GetInTouch = ({ ...props }) => {
 }
 
 const Wrap = styled.div`
-  display: flex;
-  flex-direction: column;
   height: 100%;
 
-  div {
+  /* .some {
     color: var(--light-bright-green);
     text-shadow: 0.2rem 0.2rem 0.1rem var(--pink);
     font-size: 2rem;
@@ -108,7 +93,7 @@ const Wrap = styled.div`
         transform: translate3D(0.2rem, 0.2rem, 0.2rem);
         /* transform: translateY(3px); */
       }
-    }
+    } */
 `
 
 export default GetInTouch
