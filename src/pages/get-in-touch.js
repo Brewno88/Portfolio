@@ -19,6 +19,7 @@ const GetInTouch = ({ ...props }) => {
             data-netlify-honeypot="bot-field"
             className="form"
           >
+            <input type="hidden" name="form-name" value="contact" />
             <h1>Your Email</h1>
             <input type="email" name="email" />
             <h1>Message</h1>
