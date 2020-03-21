@@ -4,15 +4,15 @@ import { respondTo } from "../mixins/respondTo"
 
 const MainText = ({ ...props }) => {
   return (
-    <_MainText style={props.style}>
+    <MyMainText style={props.style}>
       {props.innerText}
       {props.children}
-    </_MainText>
+    </MyMainText>
   )
 }
 
 //* styled-component < 💅>
-const _MainText = styled.span`
+const MyMainText = styled.span`
   font-size: 1.5rem;
   line-height: 1.5;
   text-align: center;

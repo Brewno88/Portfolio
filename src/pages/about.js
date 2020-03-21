@@ -4,7 +4,6 @@ import styled from "styled-components"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Main from "../components/main"
-import HobbyText from "../components/hobbyText"
 
 const About = ({ ...props }) => {
   return (

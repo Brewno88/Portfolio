@@ -10,7 +10,7 @@ import {
 
 const SocialLinks = () => {
   return (
-    <_SocialLinks>
+    <MySocialLinks>
       <div className="socialIcons">
         <a href="https://github.com/Brewno88" target="blank">
           <FontAwesomeIcon icon={faGithub} className="icon" />
@@ -25,12 +25,12 @@ const SocialLinks = () => {
           <FontAwesomeIcon icon={faLinkedin} className="icon" />
         </a>
       </div>
-    </_SocialLinks>
+    </MySocialLinks>
   )
 }
 
 //* styled-component < 💅>
-const _SocialLinks = styled.div`
+const MySocialLinks = styled.div`
   color: var(--off-white);
   display: flex;
   align-items: center;

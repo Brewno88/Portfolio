@@ -14,15 +14,15 @@ const HobbyText = () => {
     "Holidays 🏖",
   ]
   return (
-    <_HobbyText>
+    <MyHobbyText>
       <span>I like </span>
       <TextLoop className="loop" children={Hobbies} interval={2000} />
-    </_HobbyText>
+    </MyHobbyText>
   )
 }
 
 //* styled-component < 💅>
-const _HobbyText = styled.span`
+const MyHobbyText = styled.span`
   color: var(--off-white);
   font-size: 2rem;
   display: flex;

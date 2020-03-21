@@ -17,15 +17,15 @@ const ProfilePic = () => {
   `)
 
   return (
-    <_Link to="/">
+    <MyLink to="/">
       <MyImg fluid={data.profileImg.childImageSharp.fluid} />
-    </_Link>
+    </MyLink>
   )
 }
 
 //* styled-component < 💅>
 
-const _Link = styled(Link)`
+const MyLink = styled(Link)`
   width: 7rem;
   margin: 2%;
 `
