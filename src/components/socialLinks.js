@@ -34,7 +34,7 @@ const _SocialLinks = styled.div`
   color: var(--off-white);
   display: flex;
   align-items: center;
-  margin-right: 2rem;
+  margin-right: 2%;
   font-size: 3rem;
 
   .icon{

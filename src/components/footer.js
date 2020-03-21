@@ -7,11 +7,6 @@ const Footer = ({ ...props }) => {
   return (
     <MyFooter className="footer">
       <NavbarWrap>
-        <HomeLink to="/" open={open}>
-          <span role="img" aria-label="house emoji" open={open}>
-            🏠
-          </span>
-        </HomeLink>
         <Toggle onClick={() => setOpen(!open)} open={open}>
           <span className="V">V</span>
           <span className="C">C</span>
@@ -88,8 +83,9 @@ const Toggle = styled.div`
   height: 7rem;
   border-radius: 7.5rem;
   background-color: var(--off-white);
-  animation: ${props => (props.open ? "none" : "shake 5s infinite")};
 
+  /* animation: ${props => (props.open ? "none" : "shake 5s infinite")}; */
+  /*
   @keyframes shake {
     2%,
     18% {
@@ -115,7 +111,7 @@ const Toggle = styled.div`
     18.1% {
       transform: translate(0px);
     }
-  }
+  } */
 
   &:hover {
     cursor: pointer;
@@ -135,10 +131,10 @@ const Toggle = styled.div`
 `
 
 const Navbar = styled.nav`
-  display: ${props => (props.open ? "flex" : "none")};
+  display: ${props => (props.open ? "block" : "none")};
   z-index: 20;
   position: absolute;
-  left: 50%;
+  left: 16%;
   bottom: 100%;
 
   ol {
@@ -173,34 +169,6 @@ const ListLink = styled(Link)`
     }
     to {
       transform: scaleY(1) translateY(0);
-    }
-  }
-
-  /* &:hover {
-    text-shadow: 0.2rem 0.2rem 0.1rem var(--pink);
-    transition: all 0.3s linear;
-  } */
-`
-
-const HomeLink = styled(Link)`
-  display: ${props => (props.open ? "flex" : "none")};
-
-  align-items: center;
-  justify-content: center;
-  background: var(--off-white);
-  border-radius: 5rem;
-  font-size: 2.5rem;
-  animation: homeAppear 0.3s;
-  width: 5rem;
-  height: 5rem;
-  z-index: 20;
-
-  @keyframes homeAppear {
-    from {
-      transform: scaleY(0) translateX(100%);
-    }
-    to {
-      transform: scaleY(1) translateX(0);
     }
   }
 `

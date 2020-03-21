@@ -21,8 +21,8 @@ const Layout = ({ ...props }) => {
       <Background>
         <GlobalStyle />
         <Header>
-          <ProfilePic />
           <SocialLinks />
+          <ProfilePic />
         </Header>
         <Footer />
         {props.children}

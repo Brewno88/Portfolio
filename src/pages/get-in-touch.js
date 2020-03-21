@@ -29,7 +29,6 @@ const Wrap = styled.div`
   height: 100%;
 
   form {
-    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;

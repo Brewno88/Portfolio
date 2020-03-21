@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
 const ProfilePic = () => {
@@ -16,13 +16,19 @@ const ProfilePic = () => {
     }
   `)
 
-  return <MyImg fluid={data.profileImg.childImageSharp.fluid} />
+  return (
+    <_Link to="/">
+      <MyImg fluid={data.profileImg.childImageSharp.fluid} />
+    </_Link>
+  )
 }
 
 //* styled-component < 💅>
-const MyImg = styled(Img)`
-  width: 8rem;
-  margin-left: 2%;
-  margin-top: 2%;
+
+const _Link = styled(Link)`
+  width: 7rem;
+  margin: 2%;
 `
+
+const MyImg = styled(Img)``
 export default ProfilePic
