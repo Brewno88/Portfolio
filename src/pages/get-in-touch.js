@@ -14,10 +14,8 @@ const GetInTouch = ({ ...props }) => {
         <Main className="getInTouch-main">
           <form
             method="POST"
-            action="thank-you"
-            form-name="contact"
+            name="contact"
             data-netlify="true"
-            data-netlify-honeypot="bot-field"
             className="form"
           >
             <input type="hidden" name="form-name" value="contact" />
