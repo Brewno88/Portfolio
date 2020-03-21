@@ -7,10 +7,12 @@ import {
   faTwitter,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons"
-// This ensures that the icon CSS is loaded immediately before attempting to render icons
+
+// 1/2 "This ensures that the icon CSS is loaded immediately before attempting to render icons"
+// solution found here: "https://github.com/FortAwesome/react-fontawesome/issues/134"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 import { config } from "@fortawesome/fontawesome-svg-core"
-// Prevent fontawesome from dynamically adding its css since we did it manually above
+// 2/2 Prevent fontawesome from dynamically adding its css since we did it manually above
 config.autoAddCss = false
 
 const SocialLinks = () => {
