@@ -7,7 +7,9 @@ import {
   faTwitter,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons"
+import { fontawesome } from "@fortawesome/fontawesome"
 
+fontawesome.config = { autoAddCss: false }
 const SocialLinks = () => {
   return (
     <MySocialLinks>
