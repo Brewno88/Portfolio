@@ -12,7 +12,13 @@ const GetInTouch = ({ ...props }) => {
       <Layout path={props.path}>
         <SEO title="Page two" />
         <Main className="getInTouch-main">
-          <form method="POST" name="contact" data-netlify="true">
+          <form
+            method="POST"
+            name="contact"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            className="form"
+          >
             <h1>Your Email</h1>
             <input type="email" name="email" />
             <h1>Message</h1>
@@ -28,7 +34,7 @@ const GetInTouch = ({ ...props }) => {
 const Wrap = styled.div`
   height: 100%;
 
-  form {
+  .form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,24 +53,23 @@ const Wrap = styled.div`
       width: 40%;
       `}
 
-  h1 {
-    color: var(--light-bright-green);
-    text-shadow: 0.2rem 0.2rem 0.1rem var(--pink);
-    font-size: 2rem;
-  }
+    h1 {
+      color: var(--light-bright-green);
+      text-shadow: 0.2rem 0.2rem 0.1rem var(--pink);
+      font-size: 2rem;
+    }
 
-  input {
-    border-radius: 5rem;
-    border: none;
-    width: 100%;
-    height: 2rem;
-    padding: 2rem;
-    margin-bottom: 3rem;
-    font-size: 1.5rem;
-  }
+    input {
+      border-radius: 5rem;
+      border: none;
+      width: 100%;
+      height: 2rem;
+      padding: 2rem;
+      margin-bottom: 3rem;
+      font-size: 1.5rem;
+    }
 
-  .message {
-
+    .message {
       border: none;
       border-radius: 2rem;
       padding: 2rem;
@@ -73,8 +78,7 @@ const Wrap = styled.div`
       resize: none;
       width: 100%;
       height:50%;
-
-  }
+    }
 
     button {
       font-size: 1.5rem;
