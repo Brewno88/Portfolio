@@ -20,7 +20,7 @@ const MyImageWrap = styled.div`
 
   h1 {
     color: var(--pink);
-    text-shadow: 2px 2px 1px var(--light-bright-green);
+    text-shadow: .1rem .1rem .1rem var(--light-bright-green);
     font-size: 2rem;
 
       ${respondTo.mobileS`

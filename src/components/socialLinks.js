@@ -1,7 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { respondTo } from "../mixins/respondTo"
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
   faGithub,
   faTwitter,
@@ -43,10 +44,6 @@ const MySocialLinks = styled.div`
   align-items: center;
   margin-right: 2%;
   font-size: 3rem;
-
-  .socialIcons{
-    width: 100%;
-  }
 
   .icon{
     margin-left: 1rem;

@@ -28,6 +28,7 @@ const ProfilePic = () => {
 const MyLink = styled(Link)`
   width: 7rem;
   margin: 2%;
+  z-index: 30;
 `
 
 const MyImg = styled(Img)``

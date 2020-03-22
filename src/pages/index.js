@@ -38,7 +38,7 @@ const IndexPage = ({ ...props }) => {
             </span>
           </MainText>
           <MainText innerText="and this is my">
-            <MySpace className="my-space">_ </MySpace> !
+            <MySpace className="my-space">_</MySpace>!
           </MainText>
         </Main>
       </Layout>
@@ -57,8 +57,8 @@ const Wrap = styled.div`
       props.isMyNameGreen ? "var(--light-bright-green);" : "var(--pink);"};
     text-shadow: ${props =>
       props.isMyNameGreen
-        ? "var(--pink) .2rem .2rem .1rem;"
-        : "var(--light-bright-green) 2px 2px .1rem;"};
+        ? "var(--pink) .1rem .1rem .1rem;"
+        : "var(--light-bright-green) .1rem .1rem  .1rem;"};
     transition: all 0.3s;
   }
   .my-role {
@@ -67,14 +67,14 @@ const Wrap = styled.div`
       props.isMyNameGreen ? "var(--pink);" : "var(--light-bright-green);"};
     text-shadow: ${props =>
       props.isMyNameGreen
-        ? "var(--light-bright-green) .2rem .2rem .1rem;"
-        : "var(--pink) .2rem .2rem .1rem;"};
+        ? "var(--light-bright-green) .1rem .1rem .1rem;"
+        : "var(--pink) .1rem .1rem .1rem;"};
     transition: all 0.3s;
   }
 `
 const blink = keyframes`
   from {
-    opacity: 1
+    opacity: .2
   }
   to {
     opacity: 0
@@ -82,8 +82,8 @@ const blink = keyframes`
 `
 const MySpace = styled.span`
   margin: 0 1rem;
-  color: var(--grapefruit);
-  text-shadow: 0.3rem 0.3rem 0.1rem var(--off-white);
+  color: transparent;
+  text-shadow: 0.1rem 0.1rem 0.1rem var(--off-white);
   animation: ${blink} 1s infinite;
   transition: all 1s;
 `

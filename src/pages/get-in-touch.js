@@ -55,7 +55,7 @@ const Wrap = styled.div`
 
     h1 {
       color: var(--light-bright-green);
-      text-shadow: 0.2rem 0.2rem 0.1rem var(--pink);
+      text-shadow: .1rem .1rem .1rem var(--pink);
       font-size: 2rem;
     }
 
@@ -89,7 +89,7 @@ const Wrap = styled.div`
       color: var(--light-bright-green);
       width: 7rem;
       cursor: pointer;
-      box-shadow: 0.2rem 0.2rem 0.1rem var(--pink);
+      box-shadow: .1rem .1rem .1rem var(--pink);
 
       &:hover {
         transform: translate3D(0.2rem, 0.2rem, 0.2rem);
