@@ -1,6 +1,14 @@
 import { Link } from "gatsby"
 import React, { useState } from "react"
 import styled from "styled-components"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faBars,
+  faUser,
+  faDesktop,
+  faToolbox,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons"
 
 const Footer = ({ ...props }) => {
   const [open, setOpen] = useState(0)
@@ -8,8 +16,7 @@ const Footer = ({ ...props }) => {
     <MyFooter className="footer">
       <NavbarWrap>
         <Toggle onClick={() => setOpen(!open)} open={open}>
-          <span className="V">V</span>
-          <span className="C">C</span>
+          <FontAwesomeIcon icon={faBars} className="icon" />
         </Toggle>
 
         <Navbar className="navbar" open={open}>
@@ -19,9 +26,7 @@ const Footer = ({ ...props }) => {
                 to="/about/"
                 activeStyle={{ backgroundColor: "var(--pink)" }}
               >
-                <span role="img" aria-label="house emoji">
-                  🙍‍♂️
-                </span>
+                <FontAwesomeIcon icon={faUser} />
               </ListLink>
             </li>
             <li className="nav-item">
@@ -29,9 +34,7 @@ const Footer = ({ ...props }) => {
                 to="/projects/"
                 activeStyle={{ backgroundColor: "var(--pink)" }}
               >
-                <span role="img" aria-label="house emoji">
-                  📙
-                </span>
+                <FontAwesomeIcon icon={faDesktop} />
               </ListLink>
             </li>
             <li className="nav-item">
@@ -39,9 +42,7 @@ const Footer = ({ ...props }) => {
                 to="/skills/"
                 activeStyle={{ backgroundColor: "var(--pink)" }}
               >
-                <span role="img" aria-label="house emoji">
-                  💻
-                </span>
+                <FontAwesomeIcon icon={faToolbox} />
               </ListLink>
             </li>
             <li className="nav-item">
@@ -49,9 +50,7 @@ const Footer = ({ ...props }) => {
                 to="/get-in-touch/"
                 activeStyle={{ backgroundColor: "var(--pink)" }}
               >
-                <span role="img" aria-label="house emoji">
-                  📮
-                </span>
+                <FontAwesomeIcon icon={faEnvelope} />
               </ListLink>
             </li>
           </ol>
@@ -79,36 +78,24 @@ const Toggle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 7rem;
-  height: 7rem;
+  width: 6rem;
+  height: 6rem;
   border-radius: 7.5rem;
   background-color: var(--off-white);
+  box-shadow: 0.1rem 0.2rem 0 var(--light-bright-green);
 
-  /* animation: ${props => (props.open ? "none" : "shake 5s infinite")}; */
-  /*
-  @keyframes shake {
-    2%,
-    18% {
-      transform: translate(-2px);
+  &:active {
+    transform: translate3d(0.1rem, 0.1rem, 0.1rem);
+    box-shadow: none;
+  }
+/*
+  animation: ${props => (props.open ? "none" : "enter .5s ease-out")};
+  @keyframes enter {
+    from {
+      transform: translate(20px);
     }
 
-    4%,
-    16% {
-      transform: translate(4px);
-    }
-
-    6%,
-    10%,
-    14% {
-      transform: translate(-2px);
-    }
-
-    8%,
-    12% {
-      transform: translate(4px);
-    }
-
-    18.1% {
+    to {
       transform: translate(0px);
     }
   } */
@@ -117,26 +104,17 @@ const Toggle = styled.div`
     cursor: pointer;
   }
 
-  .V {
-    text-shadow: 0.2rem 0.2rem 0.1rem var(--pink);
-    font-size: 3.5rem;
-    text-align: left;
-    color: var(--light-bright-green);
-  }
-  .C {
-    text-shadow: 0.2rem 0.2rem 0.1rem var(--light-bright-green);
-    font-size: 3.5rem;
-    color: var(--pink);
+  .icon {
+    font-size: 3rem;
   }
 `
 
 const Navbar = styled.nav`
-  display: ${props => (props.open ? "block" : "none")};
   z-index: 20;
   position: absolute;
-  left: 16%;
+  left: 10%;
   bottom: 100%;
-
+  display: ${props => (props.open ? "block" : "none")};
   ol {
     display: flex;
     flex-direction: column;
@@ -152,6 +130,7 @@ const Navbar = styled.nav`
 
 const ListLink = styled(Link)`
   background-color: var(--off-white);
+  color: var(--gunmetal);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -160,7 +139,7 @@ const ListLink = styled(Link)`
   width: 5rem;
   height: 5rem;
   animation: navAppear 0.3s;
-  font-size: 2.5rem;
+  font-size: 2rem;
   z-index: 20;
 
   @keyframes navAppear {
