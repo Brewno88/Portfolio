@@ -29,7 +29,7 @@ const Background = ({ ...props }) => {
 const Wrap = styled(BackgroundImage)`
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 100%;
 `
 
 export default Background

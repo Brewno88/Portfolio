@@ -10,12 +10,13 @@ const ImageWrap = ({ ...props }) => {
 const MyImageWrap = styled.div`
   display: flex;
   flex-direction: column;
-  flex: 1;
   justify-content: center;
   margin-right: 5%;
+  flex: 1;
 
   @media (orientation: portrait) {
     margin-right: 0;
+    margin-bottom: 10%;
   }
 
   h1 {

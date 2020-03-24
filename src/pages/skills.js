@@ -15,29 +15,23 @@ import SEO from "../components/seo"
 
 const Skills = ({ ...props }) => {
   return (
-    <Wrap>
-      <Layout path={props.path}>
-        <SEO title="Page two" />
-        <Main className="skills-main">
-          <div className="sections-wrap">
-            <Development />
-            <Design />
-            <Others />
-            <Tech />
-          </div>
-        </Main>
-      </Layout>
-    </Wrap>
+    <Layout path={props.path}>
+      <SEO title="Page two" />
+      <MyMain className="skills-main">
+        <div className="sections-wrap">
+          <Development />
+          <Design />
+          <Others />
+          <Tech />
+        </div>
+      </MyMain>
+    </Layout>
   )
 }
 
-const Wrap = styled.div`
-  width: 100%;
-  height: 100%;
+const MyMain = styled(Main)`
   text-align: center;
-
   .skills-main {
-    justify-content: end;
       ${respondTo.mobileS`
       justify-content: end;
       `}
@@ -54,7 +48,7 @@ const Wrap = styled.div`
   .sections-wrap {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     height: 95%;
 
     @media (max-height: 420px) {

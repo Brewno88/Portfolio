@@ -9,19 +9,16 @@ import ProjectSlider from "../components/projects/projects-slider"
 
 const Projects = ({ ...props }) => {
   return (
-    <Wrap>
-      <Layout>
-        <SEO title="Page two" />
-        <Main className="projects-main">
-          <ProjectSlider />
-        </Main>
-      </Layout>
-    </Wrap>
+    <Layout>
+      <SEO title="Page two" />
+      <MyMain className="projects-main">
+        <ProjectSlider />
+      </MyMain>
+    </Layout>
   )
 }
 
-const Wrap = styled.div`
-  height: 100%;
+const MyMain = styled(Main)`
 
   .projects-main {
     padding-bottom: 1rem;
@@ -41,19 +38,19 @@ const Wrap = styled.div`
   }
   /* react-awesome-slider style modifies */
   .awssld {
-    height: 100%;
+    height: 80vh;
     .awssld__container {
       padding-bottom: 0;
       .awssld__content {
         background-color: transparent;
         display: flex;
-        align-items: center;
+        align-items: start;
         height: 100%;
       }
     }
 
     .awssld__bullets {
-      bottom: 0;
+      bottom: 3%;
     }
   }
 `

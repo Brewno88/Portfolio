@@ -62,9 +62,10 @@ const Footer = ({ ...props }) => {
 
 const MyFooter = styled.footer`
   display: flex;
-  position: absolute;
+  position: fixed;
   bottom: 2rem;
   right: 2rem;
+  z-index: 50;
 `
 
 const NavbarWrap = styled.div`
@@ -82,7 +83,7 @@ const Toggle = styled.div`
   height: 6rem;
   border-radius: 7.5rem;
   background-color: var(--off-white);
-  box-shadow: 0.1rem 0.2rem 0 var(--light-bright-green);
+  box-shadow: 0.2rem 0.2rem .2rem var(--light-bright-green);
 
   &:active {
     transform: translate3d(0.1rem, 0.1rem, 0.1rem);

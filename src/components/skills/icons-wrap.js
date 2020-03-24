@@ -11,7 +11,7 @@ const MyIcons = styled.div`
   h1 {
     color: var(--pink);
     text-shadow: .1rem .1rem .1rem var(--light-bright-green);
-    font-size: 1rem;
+    font-size: 2rem;
 
         ${respondTo.mobileS`
       font-size: 2rem;

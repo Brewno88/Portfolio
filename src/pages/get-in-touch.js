@@ -8,31 +8,29 @@ import { respondTo } from "../mixins/respondTo"
 
 const GetInTouch = ({ ...props }) => {
   return (
-    <Wrap>
-      <Layout path={props.path}>
-        <SEO title="Page two" />
-        <Main className="getInTouch-main">
-          <form
-            method="POST"
-            name="contact"
-            data-netlify="true"
-            className="form"
-          >
-            <input type="hidden" name="form-name" value="contact" />
-            <h1>Your Email</h1>
-            <input type="email" name="email" />
-            <h1>Message</h1>
-            <textarea type="message" name="message" className="message" />
-            <button type="submit">Send</button>
-          </form>
-        </Main>
-      </Layout>
-    </Wrap>
+    <Layout path={props.path}>
+      <SEO title="Page two" />
+      <MyMain className="getInTouch-main">
+        <form
+          method="POST"
+          action="/thanks/"
+          name="contact"
+          data-netlify="true"
+          className="form"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <h1>Your Email</h1>
+          <input type="email" name="email" />
+          <h1>Message</h1>
+          <textarea type="message" name="message" className="message" />
+          <button type="submit">Send</button>
+        </form>
+      </MyMain>
+    </Layout>
   )
 }
 
-const Wrap = styled.div`
-  height: 100%;
+const MyMain = styled(Main)`
 
   .form {
     display: flex;

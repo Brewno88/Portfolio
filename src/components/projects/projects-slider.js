@@ -34,22 +34,17 @@ const Slider = () => {
 
 const MySlider = styled(AwesomeSlider)`
   .outerWrap {
-    height: 80%;
     width: 90%;
       ${respondTo.mobileS`
-        height: 70%;
         width: 80%;
       `}
       ${respondTo.mobileM`
-        height: 70%;
         width: 80%;
       `}
       ${respondTo.mobileL`
-        height: 75%;
         width: 85%;
       `}
       ${respondTo.tablet`
-        height: 80%;
         width: 90%;
       `}
 

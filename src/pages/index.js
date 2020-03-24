@@ -10,47 +10,41 @@ const IndexPage = ({ ...props }) => {
   const [isMyNameGreen, setIsMyNameGreen] = useState(1)
 
   return (
-    <Wrap className="index" isMyNameGreen={isMyNameGreen}>
-      <Layout>
-        <SEO title="Home" />
-        <Main className="index-main">
-          <MainText innerText="Hi!" />
-          <MainText innerText="I am">
-            <span
-              className="my-name"
-              onMouseEnter={() => setIsMyNameGreen(0)}
-              onMouseLeave={() => setIsMyNameGreen(1)}
-              role="button" // this to fix the 'jsx-a11y/no-static-element-interactions' rule
-              tabIndex={0} // Buttons are interactive controls and thus focusable. If the button role is added to an element that is not focusable by itself (such as <span>, <div> or <p>) then, the tabindex attribute has to be used to make the button focusable.
-            >
-              Vincenzo
-            </span>
-          </MainText>
-          <MainText innerText="a">
-            <span
-              className="my-role"
-              onMouseEnter={() => setIsMyNameGreen(0)}
-              onMouseLeave={() => setIsMyNameGreen(1)}
-              role="button"
-              tabIndex={0}
-            >
-              Front End Developer
-            </span>
-          </MainText>
-          <MainText innerText="and this is my">
-            <MySpace className="my-space">_</MySpace>!
-          </MainText>
-        </Main>
-      </Layout>
-    </Wrap>
+    <Layout>
+      <SEO title="Home" />
+      <MyMain className="index-main" isMyNameGreen={isMyNameGreen}>
+        <MainText innerText="Hi!" />
+        <MainText innerText="I am">
+          <span
+            className="my-name"
+            onMouseEnter={() => setIsMyNameGreen(0)}
+            onMouseLeave={() => setIsMyNameGreen(1)}
+            role="button" // this to fix the 'jsx-a11y/no-static-element-interactions' rule
+            tabIndex={0} // Buttons are interactive controls and thus focusable. If the button role is added to an element that is not focusable by itself (such as <span>, <div> or <p>) then, the tabindex attribute has to be used to make the button focusable.
+          >
+            Vincenzo,
+          </span>
+        </MainText>
+        <MainText innerText="a">
+          <span
+            className="my-role"
+            onMouseEnter={() => setIsMyNameGreen(0)}
+            onMouseLeave={() => setIsMyNameGreen(1)}
+            role="button"
+            tabIndex={0}
+          >
+            Front End Developer
+          </span>
+        </MainText>
+        <MainText innerText="and this is my">
+          <MySpace className="my-space">_</MySpace>!
+        </MainText>
+      </MyMain>
+    </Layout>
   )
 }
 
-const Wrap = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-
+const MyMain = styled(Main)`
   .my-name {
     margin-left: 1rem;
     color: ${props =>
