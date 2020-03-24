@@ -24,7 +24,9 @@ const Footer = ({ ...props }) => {
             <li className="nav-item">
               <ListLink
                 to="/about/"
-                activeStyle={{ backgroundColor: "var(--pink)" }}
+                activeStyle={{
+                  color: "var(--pink)",
+                }}
               >
                 <FontAwesomeIcon icon={faUser} />
               </ListLink>
@@ -32,7 +34,9 @@ const Footer = ({ ...props }) => {
             <li className="nav-item">
               <ListLink
                 to="/projects/"
-                activeStyle={{ backgroundColor: "var(--pink)" }}
+                activeStyle={{
+                  color: "var(--pink)",
+                }}
               >
                 <FontAwesomeIcon icon={faDesktop} />
               </ListLink>
@@ -40,7 +44,9 @@ const Footer = ({ ...props }) => {
             <li className="nav-item">
               <ListLink
                 to="/skills/"
-                activeStyle={{ backgroundColor: "var(--pink)" }}
+                activeStyle={{
+                  color: "var(--pink)",
+                }}
               >
                 <FontAwesomeIcon icon={faToolbox} />
               </ListLink>
@@ -48,7 +54,9 @@ const Footer = ({ ...props }) => {
             <li className="nav-item">
               <ListLink
                 to="/get-in-touch/"
-                activeStyle={{ backgroundColor: "var(--pink)" }}
+                activeStyle={{
+                  color: "var(--pink)",
+                }}
               >
                 <FontAwesomeIcon icon={faEnvelope} />
               </ListLink>
@@ -65,7 +73,7 @@ const MyFooter = styled.footer`
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  z-index: 50;
+  z-index: 100;
 `
 
 const NavbarWrap = styled.div`
@@ -75,7 +83,7 @@ const NavbarWrap = styled.div`
 `
 
 const Toggle = styled.div`
-  z-index: 20;
+  z-index: 100;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -141,7 +149,7 @@ const ListLink = styled(Link)`
   height: 5rem;
   animation: navAppear 0.3s;
   font-size: 2rem;
-  z-index: 20;
+  z-index: 100;
 
   @keyframes navAppear {
     from {

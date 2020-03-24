@@ -45,6 +45,7 @@ const IndexPage = ({ ...props }) => {
 }
 
 const MyMain = styled(Main)`
+  font-weight: 700;
   .my-name {
     margin-left: 1rem;
     color: ${props =>

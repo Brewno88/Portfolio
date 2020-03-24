@@ -31,12 +31,13 @@ const Skills = ({ ...props }) => {
 
 const MyMain = styled(Main)`
   text-align: center;
-  .skills-main {
+  justify-content: start;
+
       ${respondTo.mobileS`
-      justify-content: end;
+      justify-content: center;
       `}
       ${respondTo.mobileM`
-      justify-content: end;
+      justify-content: center;
       `}
       ${respondTo.mobileL`
       justify-content: center;
@@ -44,12 +45,12 @@ const MyMain = styled(Main)`
       ${respondTo.tablet`
       justify-content: center;
       `}
-  }
+
   .sections-wrap {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: 95%;
+    justify-content: space-evenly;
+    height: 70vh;
 
     @media (max-height: 420px) {
       flex-direction: row;

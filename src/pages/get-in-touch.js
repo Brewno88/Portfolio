@@ -75,14 +75,15 @@ const MyMain = styled(Main)`
       font-size: 1.5rem;
       resize: none;
       width: 100%;
-      height:50%;
+      height:30vh;
     }
 
     button {
       font-size: 1.5rem;
+      font-weight: 700;
       border-radius: 50px;
       border: none;
-      padding: .5rem;
+      padding: 1rem .5rem .7rem .5rem;
       background: var(--gunmetal);
       color: var(--light-bright-green);
       width: 7rem;

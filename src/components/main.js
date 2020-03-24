@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import { respondTo } from "../mixins/respondTo"
 
 const Main = ({ ...props }) => {
   return <MyMain className={props.className}>{props.children}</MyMain>
@@ -13,6 +14,7 @@ const MyMain = styled.main`
   justify-content: center;
   align-items: center;
   padding: 0 2rem;
+  width: 100%;
 `
 
 export default Main

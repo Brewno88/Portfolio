@@ -46,6 +46,9 @@ const MyMain = styled(Main)`
         display: flex;
         align-items: start;
         height: 100%;
+        ${respondTo.tablet`
+        align-items: center;
+    `}
       }
     }
 
