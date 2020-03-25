@@ -55,6 +55,9 @@ const MyMain = styled(Main)`
         ? "var(--pink) .1rem .1rem .1rem;"
         : "var(--light-bright-green) .1rem .1rem  .1rem;"};
     transition: all 0.3s;
+    &:focus {
+      outline: none;
+    }
   }
   .my-role {
     margin-left: 1rem;
@@ -65,6 +68,10 @@ const MyMain = styled(Main)`
         ? "var(--light-bright-green) .1rem .1rem .1rem;"
         : "var(--pink) .1rem .1rem .1rem;"};
     transition: all 0.3s;
+
+    &:focus {
+      outline: none;
+    }
   }
 `
 const blink = keyframes`
