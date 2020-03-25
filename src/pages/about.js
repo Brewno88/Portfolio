@@ -13,23 +13,23 @@ const About = ({ ...props }) => {
       <MyMain className="about-main">
         <SEO title="Page two" />
         <p className="about-text">
-          I am a self taught Front End Developer from Italy. 🇮🇹
+          I am a self-taught Front End Developer from Italy. 🇮🇹
           <br />
           <br />
           I moved to London in 2013 where I still live. <br />
-          Here from 2015 to 2019 I ran, together with my friends, a craft beer
+          From 2015 to 2019 I ran, together with my friends, a craft beer
           brewery called <a href="#appearance">Brewheadz,</a> where I managed
           sales, marketing and design. <br /> <br />
-          In November 2019, in order to make professional experience, I started
+          In November 2019, in order to gain professional experience, I started
           to work as an intern at{" "}
           <a href="https://www.highdigital.co.uk/index.html">High Digital.</a>
           <br />
-          Here I create and maintain websites, components, animation and other
-          functionalities using mainly React and Gatsby.
+          Here I create and maintain websites, components, animations and other
+          functionality using mainly React and Gatsby.
           <br />
           <br />
-          I am constantly looking for exciting projects where I can contribute
-          with my knowledge and my passion.
+          I am constantly looking for exciting projects to which I can
+          contribute with my knowledge and my passion.
           <br />
           <br />
           Don't hesitate to <Link to="/get-in-touch"> get in touch</Link> with
