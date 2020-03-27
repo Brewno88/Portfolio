@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `My Portfolio`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `I am Vincenzo and this is my page`,
     author: `@brewno88`,
   },
   plugins: [
@@ -21,10 +21,10 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#ff79c6`,
+        theme_color: `#ff79c6`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/profileImg.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-styled-components`,
