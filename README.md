@@ -8,3 +8,7 @@ This is my Portfolio Website.
 - Framer Motion
 - styled-component 💅
 - font-awesome
+
+🚀 Deployment
+
+- Netlify
