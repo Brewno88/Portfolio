@@ -12,12 +12,14 @@ const GetInTouch = ({ ...props }) => {
       <SEO title="Page two" />
       <MyMain className="getInTouch-main">
         <form
+          name="contact"
           method="POST"
           action="/thanks/"
-          name="contact"
           data-netlify="true"
+          data-netlify-honeypot="bot-field"
           className="form"
         >
+          <input type="hidden" name="bot-field" />
           <input type="hidden" name="form-name" value="contact" />
           <h1>Your Email</h1>
           <input type="email" name="email" />
