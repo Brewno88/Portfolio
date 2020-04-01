@@ -22,9 +22,14 @@ const GetInTouch = ({ ...props }) => {
           <input type="hidden" name="bot-field" />
           <input type="hidden" name="form-name" value="contact" />
           <h1>Your Email</h1>
-          <input type="email" name="email" />
+          <input type="email" name="email" required />
           <h1>Message</h1>
-          <textarea type="message" name="message" className="message" />
+          <textarea
+            type="message"
+            name="message"
+            className="message"
+            required
+          />
           <button type="submit">Send</button>
         </form>
       </MyMain>
