@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { respondTo } from "../mixins/respondTo"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
@@ -20,18 +21,18 @@ const SocialLinks = () => {
   return (
     <MySocialLinks>
       <div className="socialIcons">
-        <a href="https://github.com/Brewno88" target="blank">
+        <OutboundLink href="https://github.com/Brewno88" target="blank">
           <FontAwesomeIcon icon={faGithub} className="icon" />
-        </a>
-        <a href="https://twitter.com/VinnieCon73" target="blank">
+        </OutboundLink>
+        <OutboundLink href="https://twitter.com/VinnieCon73" target="blank">
           <FontAwesomeIcon icon={faTwitter} className="icon" />
-        </a>
-        <a
+        </OutboundLink>
+        <OutboundLink
           href="https://www.linkedin.com/in/vincenzo-conte-442b94128/"
           target="blank"
         >
           <FontAwesomeIcon icon={faLinkedin} className="icon" />
-        </a>
+        </OutboundLink>
       </div>
     </MySocialLinks>
   )
