@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import MainText from "../components/mainText"
 import SEO from "../components/seo"
 import Main from "../components/main"
+import { config } from "@fortawesome/fontawesome-svg-core"
 
 const IndexPage = ({ ...props }) => {
   const [isMyNameGreen, setIsMyNameGreen] = useState(1)

@@ -9,7 +9,7 @@ import { respondTo } from "../mixins/respondTo"
 const GetInTouch = ({ ...props }) => {
   return (
     <Layout path={props.path}>
-      <SEO title="Page two" />
+      <SEO title="Get in touch" />
       <MyMain className="getInTouch-main">
         <form
           name="contact"

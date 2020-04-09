@@ -16,7 +16,7 @@ import SEO from "../components/seo"
 const Skills = ({ ...props }) => {
   return (
     <Layout path={props.path}>
-      <SEO title="Page two" />
+      <SEO title="Skills" />
       <MyMain className="skills-main">
         <div className="sections-wrap">
           <Development />

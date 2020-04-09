@@ -10,7 +10,7 @@ import ProjectSlider from "../components/projects/projects-slider"
 const Projects = ({ ...props }) => {
   return (
     <Layout>
-      <SEO title="Page two" />
+      <SEO title="Projects" />
       <MyMain className="projects-main">
         <ProjectSlider />
       </MyMain>

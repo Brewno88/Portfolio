@@ -11,7 +11,7 @@ const About = ({ ...props }) => {
   return (
     <Layout path={props.path}>
       <MyMain className="about-main">
-        <SEO title="Page two" />
+        <SEO title="About Me" />
         <p className="about-text">
           I am a self-taught Front End Developer from Italy. 🇮🇹
           <br />
