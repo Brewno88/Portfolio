@@ -5,6 +5,12 @@ module.exports = {
     author: `@brewno88`,
   },
   plugins: [
+    {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingID: process.env.GOOGLE_ANALYTICS_TRACKINGID || "none",
+      },
+    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -33,12 +39,6 @@ module.exports = {
       options: {
         fonts: [`kalam`, `source sans pro\:300,40,700`],
         display: "swap",
-      },
-    },
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingID: process.env.GOOGLE_ANALYTICS_TRACKINGID || "none",
       },
     },
   ],
