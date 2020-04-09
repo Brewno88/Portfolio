@@ -35,5 +35,11 @@ module.exports = {
         display: "swap",
       },
     },
+    {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingID: process.env.GOOGLE_ANALYTICS_TRACKINGID || "none",
+      },
+    },
   ],
 }
