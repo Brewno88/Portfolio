@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import { respondTo } from "../mixins/respondTo"
 
 const Main = ({ ...props }) => {
   return <MyMain className={props.className}>{props.children}</MyMain>

@@ -13,7 +13,10 @@ const About = ({ ...props }) => {
       <MyMain className="about-main">
         <SEO title="About Me" />
         <p className="about-text">
-          I am a self-taught Front End Developer from Italy. 🇮🇹
+          I am a self-taught Front End Developer from Italy.{" "}
+          <span role="img" aria-label="italy flag">
+            🇮🇹
+          </span>
           <br />
           <br />
           I moved to London in 2013 where I still live. <br />
@@ -33,13 +36,22 @@ const About = ({ ...props }) => {
           <br />
           <br />
           Don't hesitate to <Link to="/get-in-touch"> get in touch</Link> with
-          me if you need my help! 🙃
+          me if you need my help!{" "}
+          <span role="img" aria-label="upside-down-face">
+            🙃
+          </span>
         </p>
 
         <Appearance id="appearance">
-          <h1>Here you can see/hear me talking about beer! 🍻</h1>
+          <h1>
+            Here you can see/hear me talking about beer!{" "}
+            <span role="img" aria-label="clinking beer mugs">
+              🍻
+            </span>
+          </h1>
           <div className="appearance-grid">
             <iframe
+              title="Hoppily on the Road: Brewheadz"
               className="embed-video"
               src="https://www.youtube.com/embed/m6Hsg0HxTc4"
               frameborder="0"
@@ -47,6 +59,7 @@ const About = ({ ...props }) => {
               allowfullscreen="true"
             />
             <iframe
+              title="Craftwork UK: Craft Beer Stories - Brewheadz"
               className="embed-audio"
               scrolling="no"
               frameborder="no"
@@ -54,6 +67,7 @@ const About = ({ ...props }) => {
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/329498737&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
             />
             <iframe
+              title="Rhythm & Brews: Brewheadz"
               className="embed-audio"
               src="https://open.spotify.com/embed-podcast/episode/710hdXpYc4LyR7zLE4HXkU"
               frameborder="0"
