@@ -2,11 +2,11 @@ import React from "react"
 import styled from "styled-components"
 
 const Main = ({ ...props }) => {
-  return <_Main className={props.className}>{props.children}</_Main>
+  return <MyMain className={props.className}>{props.children}</MyMain>
 }
 
 //* styled-component < 💅>
-const _Main = styled.main`
+const MyMain = styled.main`
   flex: 1;
   display: flex;
   flex-direction: column;

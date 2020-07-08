@@ -2,11 +2,11 @@ import React from "react"
 import styled from "styled-components"
 
 const Header = ({ children }) => {
-  return <_Header>{children}</_Header>
+  return <MyHeader>{children}</MyHeader>
 }
 
 //* styled-component < 💅>
-const _Header = styled.header`
+const MyHeader = styled.header`
   position: absolute;
   top: 0;
   left: 0;
