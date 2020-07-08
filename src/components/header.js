@@ -13,6 +13,7 @@ const MyHeader = styled.header`
   display: flex;
   width: 100%;
   justify-content: space-between;
+  margin-bottom: 2rem;
 `
 
 export default Header

@@ -21,8 +21,8 @@ const Layout = ({ ...props }) => {
       <Background>
         <GlobalStyle />
         <Header>
-          <ProfilePic />
           <SocialLinks />
+          <ProfilePic />
         </Header>
         <Footer />
         {props.children}
@@ -31,9 +31,10 @@ const Layout = ({ ...props }) => {
   )
 }
 
-// Layout.propTypes = {
-//   children: PropTypes.node.isRequired,
-// }
+const Wrap = styled.div`
+  height: 100%;
+`
+
 const GlobalStyle = createGlobalStyle`
 :root {
   --pink: #ff79c6;
@@ -43,19 +44,23 @@ const GlobalStyle = createGlobalStyle`
   --gunmetal: #44475a;
   --white: #ffffff;
   --black: #000000;
-  --main-font: Krungthep;
+  --main-font: 'Kalam';
 }
 
 html,
 body {
-  margin: 0;
-  height: 100vh;
+  /* margin: 0; */
+  height: 100%;
   background: var(--black);
   font-size: 62.5%;
-  font-family: var(--main-font);
+  font-family: var(--main-font), cursive;
+}
+h1, h2, h3, h4, h5, h6, a{
+  font-family: var(--main-font), cursive;
+  color: var(--light-bright-green);
+  text-shadow: .07rem .07rem .1rem var(--pink);
 }
 html {
-  font-family: var(--main-font);
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -70,8 +75,5 @@ body #___gatsby,
 #gatsby-focus-wrapper {
   height: 100%;
 }
-`
-const Wrap = styled.div`
-  height: 100%;
 `
 export default Layout

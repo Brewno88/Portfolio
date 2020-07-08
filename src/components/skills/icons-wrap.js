@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { respondTo } from "../../mixins/_respondTo"
+import { respondTo } from "../../mixins/respondTo"
 
 const Icon = ({ ...props }) => {
   return <MyIcons className={props.className}>{props.children}</MyIcons>
@@ -10,8 +10,8 @@ const Icon = ({ ...props }) => {
 const MyIcons = styled.div`
   h1 {
     color: var(--pink);
-    text-shadow: 2px 2px 1px var(--light-bright-green);
-    font-size: 1rem;
+    text-shadow: .1rem .1rem .1rem var(--light-bright-green);
+    font-size: 2rem;
 
         ${respondTo.mobileS`
       font-size: 2rem;

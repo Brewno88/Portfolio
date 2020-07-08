@@ -28,7 +28,7 @@ const Development = () => {
             <Img
               className="icon"
               fixed={icon.childImageSharp.fixed}
-              key={icon.childImageSharp.id}
+              key={icon.id}
             />
           )
         })}

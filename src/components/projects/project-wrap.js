@@ -1,14 +1,9 @@
 import React from "react"
 import styled from "styled-components"
-import { respondTo } from "../../mixins/_respondTo"
+import { respondTo } from "../../mixins/respondTo"
 
 const ProjectWrap = ({ ...props }) => {
-  return (
-    <MyProjectWrap>
-      {props.children}
-      {console.log(window.orientation)}
-    </MyProjectWrap>
-  )
+  return <MyProjectWrap>{props.children}</MyProjectWrap>
 }
 
 //* styled-component < 💅>
